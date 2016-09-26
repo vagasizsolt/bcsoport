@@ -1,0 +1,18 @@
+rendszerfejlesztés prototípus
+dokumentáció
+
+nov. tesztelési terv, a kész alkalmazással
+
+dec 12. határidõ => tesztelt alkalmazás bemutatóval 
+
+követelmény specifikáció:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-milyen környezetrõl van szó?(pl:jelenleg mit használ az unokatesóm kertészboltja informatikai rendszerkénz);jelenlegi helyzet
+-cél(megrendelõ mondja el, akár írásban akár szóban) *
+-környezeti feltételek(törvényi szabályozások, kedves megrendelõ fölöttes szerve, pályázati hatóság)
+-jelenlegi folyamatok
+-megvalósítandó folyamatok *
+-követelmény lista *
+
+
+* => fontos!!!!
