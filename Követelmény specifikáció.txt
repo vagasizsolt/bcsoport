@@ -1,0 +1,28 @@
+A program megírásához a C# nyelvet választottuk és egy széleskörben felhasználható telefonkönyv rendszert szeretnénk létrehozni.
+Célunk egy új, korszerű telefonknyv létrehozása, karbantartása és a felhasználói igények kielégítése. A fő célcsoportunk a közp- és nagy vállalatok.
+Két nagy csoportra oszthatóak az  adatbázisban szereplő adatok, egyrész a vállalat belső érintettjei, munkatársak és a vállalat külső környezete.
+
+Környezeti feltétel:
+ -Személyiségi jogyok védelme.
+ 
+Jelnlegi folyamat:
+ -tervezés
+ -igény felmérés
+ 
+Megvalósítandó folyamatok:
+ -Adatbázis megtervezése
+ -felhanálói felület megtervezése
+ -hozzáférési jogok kialakítása
+ -egyéb igények felmérése
+ -keresőmotor megírása
+ -hibák kezelése
+
+Követelmények
+ -felhasználó barát, grafikus felület
+ -használható keresőmotor
+ -gyors egyszerű keresés
+ -külön hozzáférés vezetői, titkári, dolgozói szinten
+ -rugalmas, homogén adatbázis
+ -redundancia kizárása
+ -hatékony működés
+ -adattitkosítás
