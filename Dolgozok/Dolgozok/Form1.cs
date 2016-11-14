@@ -62,6 +62,9 @@ namespace Dolgozok
                 beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                 email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                 telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                Image kepX = new Bitmap(eleres);
+                pictureBox1.Image = kepX;
             }
         }
 
@@ -77,6 +80,9 @@ namespace Dolgozok
                 beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                 email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                 telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                Image kepX = new Bitmap(eleres);
+                pictureBox1.Image = kepX;
             }
         }
 
