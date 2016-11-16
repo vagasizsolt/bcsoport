@@ -226,6 +226,7 @@
             this.névjegyNyomtatásaToolStripMenuItem.Name = "névjegyNyomtatásaToolStripMenuItem";
             this.névjegyNyomtatásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.névjegyNyomtatásaToolStripMenuItem.Text = "Névjegy nyomtatása";
+            this.névjegyNyomtatásaToolStripMenuItem.Click += new System.EventHandler(this.névjegyNyomtatásaToolStripMenuItem_Click);
             // 
             // jegyzetekToolStripMenuItem
             // 
@@ -296,6 +297,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
