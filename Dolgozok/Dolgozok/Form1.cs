@@ -9,11 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SQLite;
+using System.IO;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
 
 namespace Dolgozok
 {
     public partial class Form1 : Form
     {
+
+
+
+
         Adatbazis db = Adatbazis.GetPeldany();
         int i = 1;
         public Form1()
@@ -29,7 +36,6 @@ namespace Dolgozok
 
             while (reader.Read())
             {
-                ///ezt valamilyen ciklussal meglehet oldani?
                 ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                 nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                 reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
@@ -40,11 +46,6 @@ namespace Dolgozok
                 string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
                 Image kepX = new Bitmap(eleres);
                 pictureBox1.Image = kepX;
-
-                ///ide meg majd kéne, hogy lehessen léptetni az egyes dolgozókat
-                ///illetev az is kéne, hogy ne lehessen törölni belőlük
-                ///később login form segítségével a jogosultságok persze szabályozva lesznek, hogy ki törölhet, ki módosíthat, ki csak nézhet, stb...
-                ///+még az adatbázis is kiegészítve lesz több táblával, képpel, meg egyebekkel
             }
 
 
@@ -85,6 +86,60 @@ namespace Dolgozok
                 pictureBox1.Image = kepX;
             }
         }
+
+
+        public void jegyzettömbbenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<string> adatok = new List<string>();
+
+            adatok.Add(nev_textbox.Text);
+            adatok.Add(reszleg_textbox.Text);
+            adatok.Add(beosztas_textbox.Text);
+            adatok.Add(email_textbox.Text);
+            adatok.Add(telefonszam_textbox.Text);
+
+            File.WriteAllText(@"Adatbazis\adatok.txt", String.Empty);
+
+            for (int i = 0; i < adatok.Count; i++)
+            {
+                System.IO.StreamWriter file = new System.IO.StreamWriter(@"Adatbazis\adatok.txt", true);
+                file.WriteLine(adatok[i]);
+                file.Close();
+            }
+            System.Diagnostics.Process.Start("notepad.exe", @"Adatbazis\adatok.txt");
+        }
+
+        private void vágólapraMásolásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            Clipboard.Clear();
+            List<string> adatok_vagolap = new List<string>();
+
+            adatok_vagolap.Add(nev_textbox.Text);
+            adatok_vagolap.Add(reszleg_textbox.Text);
+            adatok_vagolap.Add(beosztas_textbox.Text);
+            adatok_vagolap.Add(email_textbox.Text);
+            adatok_vagolap.Add(telefonszam_textbox.Text);
+
+            Clipboard.SetText(adatok_vagolap[0] + Environment.NewLine + adatok_vagolap[1] + Environment.NewLine + adatok_vagolap[2]
+                +Environment.NewLine + adatok_vagolap[3] + Environment.NewLine + adatok_vagolap[4]);
+
+            System.Windows.Forms.MessageBox.Show("Adatok sikeresen vágólapra másolva");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
