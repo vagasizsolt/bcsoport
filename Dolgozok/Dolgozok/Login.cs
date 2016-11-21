@@ -22,7 +22,7 @@ namespace Dolgozok
             InitializeComponent();
 
             {
-
+                Konstansok.LoginElem = this;
             }
         }
 
@@ -38,7 +38,7 @@ namespace Dolgozok
             {
 
                 if (felhasznalonev_textBox.Text == "user" && jelszo_textBox.Text =="user")
-
+                   
                 {
                     this.Hide();
                     Form1 user = new Form1();

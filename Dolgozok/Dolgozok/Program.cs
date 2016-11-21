@@ -8,6 +8,7 @@ namespace Dolgozok
 {
     static class Program
     {
+        static public Login l;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,8 @@ namespace Dolgozok
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            l = new Login();
+            Application.Run(l);
         }
     }
 }

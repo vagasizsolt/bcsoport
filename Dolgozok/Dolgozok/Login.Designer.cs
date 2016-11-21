@@ -74,6 +74,7 @@
             // 
             this.jelszo_textBox.Location = new System.Drawing.Point(148, 112);
             this.jelszo_textBox.Name = "jelszo_textBox";
+            this.jelszo_textBox.PasswordChar = '*';
             this.jelszo_textBox.Size = new System.Drawing.Size(100, 20);
             this.jelszo_textBox.TabIndex = 4;
             // 
@@ -101,5 +102,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox felhasznalonev_textBox;
         private System.Windows.Forms.TextBox jelszo_textBox;
+
+
     }
 }

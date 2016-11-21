@@ -147,6 +147,7 @@ namespace Dolgozok
                 elozo_button.Visible = false;
                 kovetkezo_button.Visible = false;
             }
+            System.Windows.Forms.MessageBox.Show("A nyomtatás nézetben Esc-el léphet ki!");
         }
 
 
@@ -177,6 +178,11 @@ namespace Dolgozok
             return base.ProcessDialogKey(keydata);
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            Program.l.Close();
+            base.OnClosed(e);
+        }
 
 
 
