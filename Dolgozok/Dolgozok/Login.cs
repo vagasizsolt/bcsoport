@@ -33,7 +33,8 @@ namespace Dolgozok
             do
             {
                 SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where Felh_nev =" + felhasznalonev_textBox);
-                if (jelszo_textBox.Equals(reader.GetValue(9)))
+                string pw = (string.Format("{0}", reader.GetValue(9)));
+                if (jelszo_textBox.Equals(pw))
                 {
                     this.Hide();
                     Form1 user = new Form1();
