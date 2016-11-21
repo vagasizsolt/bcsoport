@@ -37,10 +37,12 @@ namespace Dolgozok
 
             {
 
-                if ()
+                if (felhasznalonev_textBox.Text == "user" && jelszo_textBox.Text =="user")
 
                 {
-
+                    this.Hide();
+                    Form1 user = new Form1();
+                    user.Show();
                 }
 
                 else
