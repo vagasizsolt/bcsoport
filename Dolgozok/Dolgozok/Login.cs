@@ -28,20 +28,31 @@ namespace Dolgozok
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            Adatbazis db = Adatbazis.GetPeldany();
-
-            do
+            if (felhasznalonev_textBox.Text == "" || jelszo_textBox.Text == "")
             {
-                SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where Felh_nev =" + felhasznalonev_textBox);
-                string pw = (string.Format("{0}", reader.GetValue(9)));
-                if (jelszo_textBox.Equals(pw))
-                {
-                    this.Hide();
-                    Form1 user = new Form1();
-                    user.Show();
-                }
-            } while (false);
+                MessageBox.Show("Kérem adja meg a Felhasználónevét és a jelszavát!");
+                return;
+            }
+            try
 
+            {
+
+                if ()
+
+                {
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Login Failed!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
