@@ -55,7 +55,7 @@ namespace Dolgozok
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Form1 user = new Form1();
             user.Show();
         }

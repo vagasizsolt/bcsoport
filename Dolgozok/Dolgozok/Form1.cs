@@ -146,8 +146,19 @@ namespace Dolgozok
                 menuStrip1.Visible = false;
                 elozo_button.Visible = false;
                 kovetkezo_button.Visible = false;
+                this.FormBorderStyle = FormBorderStyle.None;
+
+                Rectangle bounds = this.Bounds;
+                using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
+                {
+                    using (Graphics g = Graphics.FromImage(bitmap))
+                    {
+                        g.CopyFromScreen(new Point(bounds.Left, bounds.Top), Point.Empty, bounds.Size);
+                    }
+                    bitmap.Save(@"Adatbazis\nevjegy.jpg", ImageFormat.Jpeg);
+                }
             }
-            System.Windows.Forms.MessageBox.Show("A nyomtatás nézetben Esc-el léphet ki!");
+            System.Windows.Forms.MessageBox.Show("A nyomtatás nézetből az Esc-el léphet ki!");
         }
 
 
@@ -159,6 +170,7 @@ namespace Dolgozok
                 menuStrip1.Visible = true;
                 elozo_button.Visible = true;
                 kovetkezo_button.Visible = true;
+                this.FormBorderStyle = FormBorderStyle.Fixed3D;
             }
         }
 
@@ -172,6 +184,7 @@ namespace Dolgozok
                     menuStrip1.Visible = true;
                     elozo_button.Visible = true;
                     kovetkezo_button.Visible = true;
+                    this.FormBorderStyle = FormBorderStyle.Fixed3D;
                     return true;
                 }
             }
