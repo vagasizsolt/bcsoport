@@ -127,3 +127,5 @@ C:\Users\gyurm\Desktop\Dolgozok\Dolgozok\obj\Debug\Dolgozok.tamogatas.resources
 C:\Users\gyurm\Desktop\Dolgozok\Dolgozok\obj\Debug\Dolgozok.csproj.GenerateResource.Cache
 C:\Users\gyurm\Desktop\rft\Dolgozok\bcsoport\Dolgozok\Dolgozok\obj\Debug\Dolgozok.tamogatas.resources
 C:\Users\gyurm\Desktop\rft\Dolgozok\bcsoport\Dolgozok\Dolgozok\obj\Debug\Dolgozok.jelszo_emlekezteto.resources
+C:\Users\gyurm\Desktop\rft\Dolgozok\bcsoport\Dolgozok\Dolgozok\bin\Debug\itextsharp.dll
+C:\Users\gyurm\Desktop\rft\Dolgozok\bcsoport\Dolgozok\Dolgozok\bin\Debug\itextsharp.xml

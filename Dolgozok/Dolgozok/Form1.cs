@@ -13,6 +13,9 @@ using System.IO;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 namespace Dolgozok
 {
     public partial class Form1 : Form
@@ -45,7 +48,7 @@ namespace Dolgozok
                 telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
 
                 string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                Image kepX = new Bitmap(eleres);
+                System.Drawing.Image kepX = new Bitmap(eleres);
                 pictureBox1.Image = kepX;
             }
 
@@ -68,7 +71,7 @@ namespace Dolgozok
                     email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                     telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
                     string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                    Image kepX = new Bitmap(eleres);
+                    System.Drawing.Image kepX = new Bitmap(eleres);
                     pictureBox1.Image = kepX;
                 }
             }
@@ -91,7 +94,7 @@ namespace Dolgozok
                     email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                     telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
                     string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                    Image kepX = new Bitmap(eleres);
+                    System.Drawing.Image kepX = new Bitmap(eleres);
                     pictureBox1.Image = kepX;
                 }
             }
@@ -148,7 +151,7 @@ namespace Dolgozok
                 kovetkezo_button.Visible = false;
                 this.FormBorderStyle = FormBorderStyle.None;
 
-                Rectangle bounds = this.Bounds;
+                System.Drawing.Rectangle bounds = this.Bounds;
                 using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
                 {
                     using (Graphics g = Graphics.FromImage(bitmap))
@@ -157,6 +160,20 @@ namespace Dolgozok
                     }
                     bitmap.Save(@"Adatbazis\nevjegy.jpg", ImageFormat.Jpeg);
                 }
+
+                Document document = new Document();
+                using (var stream = new FileStream(@"Adatbazis\nevjegy.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
+                {
+                    PdfWriter.GetInstance(document, stream);
+                    document.Open();
+                    using (var imageStream = new FileStream(@"Adatbazis\nevjegy.jpg", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                    {
+                        var image = iTextSharp.text.Image.GetInstance(imageStream);
+                        document.Add(image);
+                    }
+                    document.Close();
+                }
+                
             }
             System.Windows.Forms.MessageBox.Show("A nyomtatás nézetből az Esc-el léphet ki!");
         }
