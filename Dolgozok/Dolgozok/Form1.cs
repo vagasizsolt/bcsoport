@@ -16,6 +16,7 @@ using System.Drawing.Printing;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
+
 namespace Dolgozok
 {
     public partial class Form1 : Form
@@ -173,6 +174,8 @@ namespace Dolgozok
                     }
                     document.Close();
                 }
+
+                System.Diagnostics.Process.Start(@"Adatbazis\nevjegy.pdf");
                 
             }
             System.Windows.Forms.MessageBox.Show("A nyomtatás nézetből az Esc-el léphet ki!");
