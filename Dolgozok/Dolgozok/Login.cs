@@ -29,37 +29,42 @@ namespace Dolgozok
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            
+
             if (felhasznalonev_textBox.Text == "" || jelszo_textBox.Text == "")
             {
                 MessageBox.Show("Kérem adja meg a Felhasználónevét és a jelszavát!");
                 return;
             }
-            try
-
+            else
             {
-
-                string Query = ("select * from Dolgozok where Felh_nev='" + felhasznalonev_textBox.Text + "' and Jelszo='" + jelszo_textBox.Text + "'");
-                SQLiteDataReader reader = db.Lekerdezes(Query);
-                while (reader.Read())
+                try
                 {
-                    if (felhasznalonev_textBox.Text == String.Format("{0}", reader.GetValue(8)) && jelszo_textBox.Text == String.Format("{0}", reader.GetValue(9)))
+                    SQLiteDataReader felhasznalo = db.Lekerdezes("select * from Dolgozok where Felh_nev='" + felhasznalonev_textBox.Text + "'");
+                    if (felhasznalo.HasRows)
                     {
-                        this.Hide();
-                        Form1 user = new Form1();
-                        user.Show();
+                        while (felhasznalo.Read())
+                        {
+                            string nev = String.Format(String.Format("{0}", felhasznalo.GetValue(7)));
+                            string pw = String.Format(String.Format("{0}", felhasznalo.GetValue(8)));
+                            if (felhasznalonev_textBox.Text == nev.ToString() && jelszo_textBox.Text == pw.ToString())
+                            {
+                                this.Hide();
+                                Form1 user = new Form1();
+                                user.Show();
+                            }
+                            
+                        }
                     }
-
                     else
                     {
                         MessageBox.Show("Hibás felhasználónév vagy jelszó!");
                     }
-                }
-            }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

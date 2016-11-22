@@ -18,6 +18,7 @@ namespace Dolgozok
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             l = new Login();
+
             Application.Run(l);
         }
     }
