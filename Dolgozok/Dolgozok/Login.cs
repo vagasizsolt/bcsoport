@@ -52,7 +52,7 @@ namespace Dolgozok
                                 Form1 user = new Form1();
                                 user.Show();
                             }
-                            
+
                         }
                     }
                     else
