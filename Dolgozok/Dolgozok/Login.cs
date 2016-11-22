@@ -17,6 +17,7 @@ namespace Dolgozok
 {
     public partial class Login : Form
     {
+        Adatbazis db = Adatbazis.GetPeldany();
         public Login()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace Dolgozok
 
         private void login_button_Click(object sender, EventArgs e)
         {
+            
             if (felhasznalonev_textBox.Text == "" || jelszo_textBox.Text == "")
             {
                 MessageBox.Show("Kérem adja meg a Felhasználónevét és a jelszavát!");
@@ -37,17 +39,21 @@ namespace Dolgozok
 
             {
 
-                if (felhasznalonev_textBox.Text == "user" && jelszo_textBox.Text =="user")
-                   
+                string Query = ("select * from Dolgozok where Felh_nev='" + felhasznalonev_textBox.Text + "' and Jelszo='" + jelszo_textBox.Text + "'");
+                SQLiteDataReader reader = db.Lekerdezes(Query);
+                while (reader.Read())
                 {
-                    this.Hide();
-                    Form1 user = new Form1();
-                    user.Show();
-                }
+                    if (felhasznalonev_textBox.Text == String.Format("{0}", reader.GetValue(8)) && jelszo_textBox.Text == String.Format("{0}", reader.GetValue(9)))
+                    {
+                        this.Hide();
+                        Form1 user = new Form1();
+                        user.Show();
+                    }
 
-                else
-                {
-                    MessageBox.Show("Login Failed!");
+                    else
+                    {
+                        MessageBox.Show("Hibás felhasználónév vagy jelszó!");
+                    }
                 }
             }
 
