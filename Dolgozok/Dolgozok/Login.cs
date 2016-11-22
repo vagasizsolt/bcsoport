@@ -67,5 +67,16 @@ namespace Dolgozok
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            jelszo_emlekezteto j = new jelszo_emlekezteto();
+            j.Show();
+        }
+
+
+
+
     }
 }

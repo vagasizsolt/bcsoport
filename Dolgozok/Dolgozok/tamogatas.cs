@@ -21,7 +21,7 @@ namespace Dolgozok
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text=="" || richTextBox1.Text=="")
+            if (textBox2.Text == "" || richTextBox1.Text == "")
             {
                 MessageBox.Show("Kérem töltse ki az összes mezőt!");
                 return;
@@ -32,7 +32,7 @@ namespace Dolgozok
                 SmtpClient smtp = new SmtpClient();
 
                 message.From = new MailAddress("felhasznalo.dolgozoadatbazis@gmail.com");
-                message.To.Add(new MailAddress("gyurmatag@gmail.com"));
+                message.To.Add(new MailAddress("tamogatas.dolgozoadatbazis@gmail.com"));
                 message.Subject = textBox2.Text;
                 message.Body = richTextBox1.Text;
 
@@ -55,7 +55,7 @@ namespace Dolgozok
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Form1 user = new Form1();
             user.Show();
         }

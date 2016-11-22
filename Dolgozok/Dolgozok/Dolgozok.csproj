@@ -74,6 +74,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKezelo.cs" />
+    <Compile Include="jelszo_emlekezteto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jelszo_emlekezteto.Designer.cs">
+      <DependentUpon>jelszo_emlekezteto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Konstansok.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jelszo_emlekezteto.resx">
+      <DependentUpon>jelszo_emlekezteto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
