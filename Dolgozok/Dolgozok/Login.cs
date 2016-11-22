@@ -23,7 +23,7 @@ namespace Dolgozok
             InitializeComponent();
 
             {
-                
+                Konstansok.LoginElem = this;
             }
         }
 
@@ -41,11 +41,9 @@ namespace Dolgozok
 
                 string Query = ("select * from Dolgozok where Felh_nev='" + felhasznalonev_textBox.Text + "' and Jelszo='" + jelszo_textBox.Text + "'");
                 SQLiteDataReader reader = db.Lekerdezes(Query);
-                while(reader.Read())
+                while (reader.Read())
                 {
-
                     if (felhasznalonev_textBox.Text == String.Format("{0}", reader.GetValue(8)) && jelszo_textBox.Text == String.Format("{0}", reader.GetValue(9)))
-
                     {
                         this.Hide();
                         Form1 user = new Form1();
