@@ -43,18 +43,20 @@ namespace Dolgozok
                 SQLiteDataReader reader = db.Lekerdezes(Query);
                 while (reader.Read())
                 {
-                    if (felhasznalonev_textBox.Text == String.Format("{0}", reader.GetValue(8)) && jelszo_textBox.Text == String.Format("{0}", reader.GetValue(9)))
+                    if (felhasznalonev_textBox.Text == String.Format("{0}", reader.GetValue(7)) && jelszo_textBox.Text == String.Format("{0}", reader.GetValue(8)))
                     {
                         this.Hide();
                         Form1 user = new Form1();
                         user.Show();
                     }
-
                     else
                     {
                         MessageBox.Show("Hibás felhasználónév vagy jelszó!");
                     }
+
                 }
+
+                
             }
 
             catch (Exception ex)
