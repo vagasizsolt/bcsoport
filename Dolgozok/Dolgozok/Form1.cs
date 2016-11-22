@@ -184,6 +184,13 @@ namespace Dolgozok
             base.OnClosed(e);
         }
 
+        private void támogatásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            tamogatas tamogatas = new tamogatas();
+            tamogatas.Show();
+        }
+
 
 
 
