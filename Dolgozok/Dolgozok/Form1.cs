@@ -21,7 +21,6 @@ namespace Dolgozok
 {
     public partial class Form1 : Form
     {
-
         private bool nevjegyNyomtatasMod = false;
 
 
@@ -224,8 +223,10 @@ namespace Dolgozok
             tamogatas.Show();
         }
 
-
-
+        protected override void OnActivated(EventArgs e)
+        {
+            aktivlogin.Text = ("Bejeletnkezve, mint: " + Login.loginnev);
+        }
 
 
     }

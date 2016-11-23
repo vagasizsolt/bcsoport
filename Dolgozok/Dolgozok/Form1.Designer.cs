@@ -49,14 +49,19 @@
             this.jegyzettömbbenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vágólapraMásolásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.névjegyNyomtatásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jegyzetekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jegyzetekMegjelenítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jegyzetHozzáadásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faliújságraÍrásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nézetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaNézetMegjelenítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faliújságMegjelenítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.támogatásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.névjegyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kijelentkezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.aktivlogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 66);
+            this.label1.Location = new System.Drawing.Point(40, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -73,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 99);
+            this.label2.Location = new System.Drawing.Point(40, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 1;
@@ -82,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 131);
+            this.label3.Location = new System.Drawing.Point(40, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 2;
@@ -91,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 167);
+            this.label4.Location = new System.Drawing.Point(40, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 3;
@@ -100,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 234);
+            this.label5.Location = new System.Drawing.Point(40, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 4;
@@ -109,7 +114,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 200);
+            this.label6.Location = new System.Drawing.Point(40, 259);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 5;
@@ -117,49 +122,49 @@
             // 
             // ID_textbox
             // 
-            this.ID_textbox.Location = new System.Drawing.Point(119, 66);
+            this.ID_textbox.Location = new System.Drawing.Point(119, 125);
             this.ID_textbox.Name = "ID_textbox";
             this.ID_textbox.Size = new System.Drawing.Size(131, 20);
             this.ID_textbox.TabIndex = 6;
             // 
             // nev_textbox
             // 
-            this.nev_textbox.Location = new System.Drawing.Point(119, 99);
+            this.nev_textbox.Location = new System.Drawing.Point(119, 158);
             this.nev_textbox.Name = "nev_textbox";
             this.nev_textbox.Size = new System.Drawing.Size(131, 20);
             this.nev_textbox.TabIndex = 7;
             // 
             // reszleg_textbox
             // 
-            this.reszleg_textbox.Location = new System.Drawing.Point(119, 131);
+            this.reszleg_textbox.Location = new System.Drawing.Point(119, 190);
             this.reszleg_textbox.Name = "reszleg_textbox";
             this.reszleg_textbox.Size = new System.Drawing.Size(131, 20);
             this.reszleg_textbox.TabIndex = 8;
             // 
             // beosztas_textbox
             // 
-            this.beosztas_textbox.Location = new System.Drawing.Point(119, 167);
+            this.beosztas_textbox.Location = new System.Drawing.Point(119, 226);
             this.beosztas_textbox.Name = "beosztas_textbox";
             this.beosztas_textbox.Size = new System.Drawing.Size(131, 20);
             this.beosztas_textbox.TabIndex = 9;
             // 
             // email_textbox
             // 
-            this.email_textbox.Location = new System.Drawing.Point(119, 200);
+            this.email_textbox.Location = new System.Drawing.Point(119, 259);
             this.email_textbox.Name = "email_textbox";
             this.email_textbox.Size = new System.Drawing.Size(131, 20);
             this.email_textbox.TabIndex = 10;
             // 
             // telefonszam_textbox
             // 
-            this.telefonszam_textbox.Location = new System.Drawing.Point(119, 234);
+            this.telefonszam_textbox.Location = new System.Drawing.Point(119, 293);
             this.telefonszam_textbox.Name = "telefonszam_textbox";
             this.telefonszam_textbox.Size = new System.Drawing.Size(131, 20);
             this.telefonszam_textbox.TabIndex = 11;
             // 
             // kovetkezo_button
             // 
-            this.kovetkezo_button.Location = new System.Drawing.Point(228, 297);
+            this.kovetkezo_button.Location = new System.Drawing.Point(290, 356);
             this.kovetkezo_button.Name = "kovetkezo_button";
             this.kovetkezo_button.Size = new System.Drawing.Size(75, 23);
             this.kovetkezo_button.TabIndex = 12;
@@ -169,7 +174,7 @@
             // 
             // elozo_button
             // 
-            this.elozo_button.Location = new System.Drawing.Point(105, 297);
+            this.elozo_button.Location = new System.Drawing.Point(137, 356);
             this.elozo_button.Name = "elozo_button";
             this.elozo_button.Size = new System.Drawing.Size(75, 23);
             this.elozo_button.TabIndex = 13;
@@ -179,7 +184,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(310, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(310, 125);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,12 +195,12 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.megjelenítésToolStripMenuItem,
-            this.jegyzetekToolStripMenuItem,
+            this.nézetToolStripMenuItem,
             this.támogatásToolStripMenuItem,
-            this.névjegyToolStripMenuItem});
+            this.kijelentkezésToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(509, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(798, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -204,7 +209,8 @@
             this.megjelenítésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jegyzettömbbenToolStripMenuItem,
             this.vágólapraMásolásToolStripMenuItem,
-            this.névjegyNyomtatásaToolStripMenuItem});
+            this.névjegyNyomtatásaToolStripMenuItem,
+            this.faliújságraÍrásToolStripMenuItem});
             this.megjelenítésToolStripMenuItem.Name = "megjelenítésToolStripMenuItem";
             this.megjelenítésToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.megjelenítésToolStripMenuItem.Text = "Műveletek";
@@ -230,26 +236,32 @@
             this.névjegyNyomtatásaToolStripMenuItem.Text = "Névjegy nyomtatása";
             this.névjegyNyomtatásaToolStripMenuItem.Click += new System.EventHandler(this.névjegyNyomtatásaToolStripMenuItem_Click);
             // 
-            // jegyzetekToolStripMenuItem
+            // faliújságraÍrásToolStripMenuItem
             // 
-            this.jegyzetekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jegyzetekMegjelenítéseToolStripMenuItem,
-            this.jegyzetHozzáadásaToolStripMenuItem});
-            this.jegyzetekToolStripMenuItem.Name = "jegyzetekToolStripMenuItem";
-            this.jegyzetekToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.jegyzetekToolStripMenuItem.Text = "Jegyzetek";
+            this.faliújságraÍrásToolStripMenuItem.Name = "faliújságraÍrásToolStripMenuItem";
+            this.faliújságraÍrásToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.faliújságraÍrásToolStripMenuItem.Text = "Faliújságra írás";
             // 
-            // jegyzetekMegjelenítéseToolStripMenuItem
+            // nézetToolStripMenuItem
             // 
-            this.jegyzetekMegjelenítéseToolStripMenuItem.Name = "jegyzetekMegjelenítéseToolStripMenuItem";
-            this.jegyzetekMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.jegyzetekMegjelenítéseToolStripMenuItem.Text = "Jegyzet megjelenítése";
+            this.nézetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaNézetMegjelenítéseToolStripMenuItem,
+            this.faliújságMegjelenítéseToolStripMenuItem});
+            this.nézetToolStripMenuItem.Name = "nézetToolStripMenuItem";
+            this.nézetToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.nézetToolStripMenuItem.Text = "Nézet";
             // 
-            // jegyzetHozzáadásaToolStripMenuItem
+            // listaNézetMegjelenítéseToolStripMenuItem
             // 
-            this.jegyzetHozzáadásaToolStripMenuItem.Name = "jegyzetHozzáadásaToolStripMenuItem";
-            this.jegyzetHozzáadásaToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.jegyzetHozzáadásaToolStripMenuItem.Text = "Jegyzet hozzáadása";
+            this.listaNézetMegjelenítéseToolStripMenuItem.Name = "listaNézetMegjelenítéseToolStripMenuItem";
+            this.listaNézetMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.listaNézetMegjelenítéseToolStripMenuItem.Text = "Lista nézet megjelenítése";
+            // 
+            // faliújságMegjelenítéseToolStripMenuItem
+            // 
+            this.faliújságMegjelenítéseToolStripMenuItem.Name = "faliújságMegjelenítéseToolStripMenuItem";
+            this.faliújságMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.faliújságMegjelenítéseToolStripMenuItem.Text = "Faliújság megjelenítése";
             // 
             // támogatásToolStripMenuItem
             // 
@@ -258,11 +270,11 @@
             this.támogatásToolStripMenuItem.Text = "Támogatás";
             this.támogatásToolStripMenuItem.Click += new System.EventHandler(this.támogatásToolStripMenuItem_Click);
             // 
-            // névjegyToolStripMenuItem
+            // kijelentkezésToolStripMenuItem
             // 
-            this.névjegyToolStripMenuItem.Name = "névjegyToolStripMenuItem";
-            this.névjegyToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.névjegyToolStripMenuItem.Text = "Névjegy";
+            this.kijelentkezésToolStripMenuItem.Name = "kijelentkezésToolStripMenuItem";
+            this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.kijelentkezésToolStripMenuItem.Text = "Kijelentkezés";
             // 
             // printDialog1
             // 
@@ -282,11 +294,48 @@
             // 
             this.printDialog2.UseEXDialog = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(218, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(245, 20);
+            this.textBox1.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(485, 67);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(110, 21);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(167, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Keresés";
+            // 
+            // aktivlogin
+            // 
+            this.aktivlogin.AutoSize = true;
+            this.aktivlogin.Location = new System.Drawing.Point(664, 9);
+            this.aktivlogin.Name = "aktivlogin";
+            this.aktivlogin.Size = new System.Drawing.Size(42, 13);
+            this.aktivlogin.TabIndex = 20;
+            this.aktivlogin.Text = "felhnev";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 461);
+            this.ClientSize = new System.Drawing.Size(798, 487);
+            this.Controls.Add(this.aktivlogin);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.elozo_button);
             this.Controls.Add(this.kovetkezo_button);
@@ -339,12 +388,17 @@
         private System.Windows.Forms.ToolStripMenuItem névjegyNyomtatásaToolStripMenuItem;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.ToolStripMenuItem jegyzetekToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jegyzetekMegjelenítéseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jegyzetHozzáadásaToolStripMenuItem;
         private System.Windows.Forms.PrintDialog printDialog2;
         private System.Windows.Forms.ToolStripMenuItem támogatásToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem névjegyToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolStripMenuItem faliújságraÍrásToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nézetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaNézetMegjelenítéseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faliújságMegjelenítéseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kijelentkezésToolStripMenuItem;
+        private System.Windows.Forms.Label aktivlogin;
     }
 }
 

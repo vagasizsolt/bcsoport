@@ -17,6 +17,8 @@ namespace Dolgozok
 {
     public partial class Login : Form
     {
+        public static string loginnev = "";
+
         Adatbazis db = Adatbazis.GetPeldany();
         public Login()
         {
@@ -48,9 +50,10 @@ namespace Dolgozok
                             string pw = String.Format(String.Format("{0}", felhasznalo.GetValue(8)));
                             if (felhasznalonev_textBox.Text == nev.ToString() && jelszo_textBox.Text == pw.ToString())
                             {
+                                loginnev = nev;
                                 this.Hide();
                                 Form1 user = new Form1();
-                                user.Show();
+                                user.Show();                             
                             }
 
                         }
