@@ -225,7 +225,26 @@ namespace Dolgozok
 
         protected override void OnActivated(EventArgs e)
         {
-            aktivlogin.Text = ("Bejeletnkezve, mint: " + Login.loginnev);
+            aktivlogin.Text = ( Login.loginnev);
+        }
+
+        private void kijelentkezésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+
+                if (ctrl is MdiClient)
+                {
+                    ctrl.BackColor = Color.White;
+                }
+            }
         }
 
 

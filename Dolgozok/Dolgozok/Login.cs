@@ -78,7 +78,10 @@ namespace Dolgozok
             j.Show();
         }
 
-
+        protected override void OnClosed(EventArgs e)
+        {
+            Application.Exit();
+        }
 
 
     }

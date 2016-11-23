@@ -69,6 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(40, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
@@ -275,6 +276,7 @@
             this.kijelentkezésToolStripMenuItem.Name = "kijelentkezésToolStripMenuItem";
             this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.kijelentkezésToolStripMenuItem.Text = "Kijelentkezés";
+            this.kijelentkezésToolStripMenuItem.Click += new System.EventHandler(this.kijelentkezésToolStripMenuItem_Click);
             // 
             // printDialog1
             // 
@@ -321,7 +323,7 @@
             // aktivlogin
             // 
             this.aktivlogin.AutoSize = true;
-            this.aktivlogin.Location = new System.Drawing.Point(664, 9);
+            this.aktivlogin.Location = new System.Drawing.Point(706, 9);
             this.aktivlogin.Name = "aktivlogin";
             this.aktivlogin.Size = new System.Drawing.Size(42, 13);
             this.aktivlogin.TabIndex = 20;
@@ -331,6 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(798, 487);
             this.Controls.Add(this.aktivlogin);
             this.Controls.Add(this.label7);
@@ -352,9 +355,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
