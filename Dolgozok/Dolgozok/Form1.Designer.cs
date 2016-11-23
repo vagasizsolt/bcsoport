@@ -62,6 +62,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.aktivlogin = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.keresbutton = new System.Windows.Forms.Button();
+            this.körÜzenetÍrásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -211,7 +214,8 @@
             this.jegyzettömbbenToolStripMenuItem,
             this.vágólapraMásolásToolStripMenuItem,
             this.névjegyNyomtatásaToolStripMenuItem,
-            this.faliújságraÍrásToolStripMenuItem});
+            this.faliújságraÍrásToolStripMenuItem,
+            this.körÜzenetÍrásaToolStripMenuItem});
             this.megjelenítésToolStripMenuItem.Name = "megjelenítésToolStripMenuItem";
             this.megjelenítésToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.megjelenítésToolStripMenuItem.Text = "Műveletek";
@@ -298,7 +302,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(218, 68);
+            this.textBox1.Location = new System.Drawing.Point(137, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(245, 20);
             this.textBox1.TabIndex = 17;
@@ -306,7 +310,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(485, 67);
+            this.comboBox1.Items.AddRange(new object[] {
+            "ID",
+            "Nev",
+            "Részleg",
+            "Beosztás",
+            "Email",
+            "Telefonszám"});
+            this.comboBox1.Location = new System.Drawing.Point(404, 67);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(110, 21);
             this.comboBox1.TabIndex = 18;
@@ -314,7 +325,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(167, 75);
+            this.label7.Location = new System.Drawing.Point(86, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 19;
@@ -329,12 +340,40 @@
             this.aktivlogin.TabIndex = 20;
             this.aktivlogin.Text = "felhnev";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(520, 67);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 17);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "Pontos egyezés";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // keresbutton
+            // 
+            this.keresbutton.Location = new System.Drawing.Point(627, 67);
+            this.keresbutton.Name = "keresbutton";
+            this.keresbutton.Size = new System.Drawing.Size(75, 23);
+            this.keresbutton.TabIndex = 24;
+            this.keresbutton.Text = "Keresés";
+            this.keresbutton.UseVisualStyleBackColor = true;
+            this.keresbutton.Click += new System.EventHandler(this.keresbutton_Click);
+            // 
+            // körÜzenetÍrásaToolStripMenuItem
+            // 
+            this.körÜzenetÍrásaToolStripMenuItem.Name = "körÜzenetÍrásaToolStripMenuItem";
+            this.körÜzenetÍrásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.körÜzenetÍrásaToolStripMenuItem.Text = "Kör üzenet írása";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(798, 487);
+            this.Controls.Add(this.keresbutton);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.aktivlogin);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox1);
@@ -355,11 +394,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Dolgozói adatbázis";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -405,6 +443,9 @@
         private System.Windows.Forms.ToolStripMenuItem faliújságMegjelenítéseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kijelentkezésToolStripMenuItem;
         private System.Windows.Forms.Label aktivlogin;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button keresbutton;
+        private System.Windows.Forms.ToolStripMenuItem körÜzenetÍrásaToolStripMenuItem;
     }
 }
 

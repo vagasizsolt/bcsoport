@@ -149,6 +149,12 @@ namespace Dolgozok
                 menuStrip1.Visible = false;
                 elozo_button.Visible = false;
                 kovetkezo_button.Visible = false;
+                label7.Visible = false;
+                textBox1.Visible = false;
+                comboBox1.Visible = false;
+                checkBox1.Visible = false;
+                aktivlogin.Visible = false;
+                keresbutton.Visible = false;
                 this.FormBorderStyle = FormBorderStyle.None;
 
                 System.Drawing.Rectangle bounds = this.Bounds;
@@ -189,6 +195,12 @@ namespace Dolgozok
                 menuStrip1.Visible = true;
                 elozo_button.Visible = true;
                 kovetkezo_button.Visible = true;
+                label7.Visible = true;
+                textBox1.Visible = true;
+                comboBox1.Visible = true;
+                checkBox1.Visible = true;
+                aktivlogin.Visible = true;
+                keresbutton.Visible = true;
                 this.FormBorderStyle = FormBorderStyle.Fixed3D;
             }
         }
@@ -203,6 +215,12 @@ namespace Dolgozok
                     menuStrip1.Visible = true;
                     elozo_button.Visible = true;
                     kovetkezo_button.Visible = true;
+                    label7.Visible = true;
+                    textBox1.Visible = true;
+                    comboBox1.Visible = true;
+                    checkBox1.Visible = true;
+                    aktivlogin.Visible = true;
+                    keresbutton.Visible = true;
                     this.FormBorderStyle = FormBorderStyle.Fixed3D;
                     return true;
                 }
@@ -245,6 +263,13 @@ namespace Dolgozok
                     ctrl.BackColor = Color.White;
                 }
             }
+        }
+
+        private void keresbutton_Click(object sender, EventArgs e)
+        {
+            string nev = textBox1.Text;
+            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where Nev=" + nev);
+            
         }
 
 
