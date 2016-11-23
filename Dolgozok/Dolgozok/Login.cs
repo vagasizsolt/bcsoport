@@ -39,35 +39,56 @@ namespace Dolgozok
             }
             else
             {
-                try
+                //try
+                //{
+                SQLiteDataReader felhasznalo = db.Lekerdezes("select * from Dolgozok where Felh_nev='" + felhasznalonev_textBox.Text + "'");
+                if (felhasznalo.HasRows)
                 {
-                    SQLiteDataReader felhasznalo = db.Lekerdezes("select * from Dolgozok where Felh_nev='" + felhasznalonev_textBox.Text + "'");
-                    if (felhasznalo.HasRows)
+                    string felh_nev = "";
+                    string pw = "";
+                    if (felhasznalo.Read())
                     {
-                        while (felhasznalo.Read())
-                        {
-                            string nev = String.Format(String.Format("{0}", felhasznalo.GetValue(7)));
-                            string pw = String.Format(String.Format("{0}", felhasznalo.GetValue(8)));
-                            if (felhasznalonev_textBox.Text == nev.ToString() && jelszo_textBox.Text == pw.ToString())
-                            {
-                                loginnev = nev;
-                                this.Hide();
-                                Form1 user = new Form1();
-                                user.Show();                             
-                            }
+                        felh_nev = felhasznalo.GetValue(7).ToString();
+                        pw = felhasznalo.GetValue(8).ToString();
+                    }
 
-                        }
+                    if ((felhasznalonev_textBox.Text == felh_nev.ToString() && jelszo_textBox.Text == pw.ToString()) == false)
+                    {
+                        MessageBox.Show("Hibás felhasználó név vagy jelszó!");
                     }
                     else
                     {
-                        MessageBox.Show("Hibás felhasználónév vagy jelszó!");
+                        loginnev = felh_nev;
+                        this.Hide();
+                        Form1 user = new Form1();
+                        user.Show();
                     }
 
+
+                    //while (felhasznalo.Read())
+                    //{
+                    //    string nev = String.Format(String.Format("{0}", felhasznalo.GetValue(7)));
+                    //    string pw = String.Format(String.Format("{0}", felhasznalo.GetValue(8)));
+                    //    if (felhasznalonev_textBox.Text == nev.ToString() && jelszo_textBox.Text == pw.ToString())
+                    //    {
+                    //        loginnev = nev;
+                    //        this.Hide();
+                    //        Form1 user = new Form1();
+                    //        user.Show();                             
+                    //    }
+                    //
+                    //}
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Nincs ilyen felhasználó");
                 }
+
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
             }
         }
 
