@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.jelszo_textBox);
             this.Controls.Add(this.felhasznalonev_textBox);
@@ -102,6 +102,7 @@
             this.Controls.Add(this.login_button);
             this.Name = "Login";
             this.Text = "Login";
+            this.Resize += new System.EventHandler(this.Login_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

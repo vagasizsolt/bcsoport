@@ -17,6 +17,10 @@ namespace Dolgozok
         public tamogatas()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Size = new System.Drawing.Size(545, 300);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,6 +69,12 @@ namespace Dolgozok
             this.Hide();
             Form1 user = new Form1();
             user.Show();
+        }
+
+        private void tamogatas_Resize(object sender, EventArgs e)
+        {
+
+            this.Size = new System.Drawing.Size(545, 300);
         }
 
     }

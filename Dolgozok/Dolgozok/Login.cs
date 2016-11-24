@@ -20,12 +20,20 @@ namespace Dolgozok
         public static string loginnev = "";
 
         Adatbazis db = Adatbazis.GetPeldany();
+
+
         public Login()
         {
             InitializeComponent();
 
+
             {
                 Konstansok.LoginElem = this;
+                
+                this.FormBorderStyle = FormBorderStyle.FixedDialog;
+                this.StartPosition = FormStartPosition.CenterScreen;
+                this.Size = new System.Drawing.Size(300, 300);
+
             }
         }
 
@@ -102,6 +110,13 @@ namespace Dolgozok
         protected override void OnClosed(EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Resize(object sender, EventArgs e)
+        {
+
+            this.Size = new System.Drawing.Size(300, 300);
+
         }
 
 

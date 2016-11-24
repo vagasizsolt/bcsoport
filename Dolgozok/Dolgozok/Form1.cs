@@ -52,6 +52,9 @@ namespace Dolgozok
                 pictureBox1.Image = kepX;
             }
 
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Size = new System.Drawing.Size(815, 525);
 
         }
 
@@ -293,6 +296,13 @@ namespace Dolgozok
         private void faliújságMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Visible = true;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+
+
+            this.Size = new System.Drawing.Size(815, 525);
         }
 
 

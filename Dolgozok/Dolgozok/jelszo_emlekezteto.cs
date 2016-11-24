@@ -24,6 +24,10 @@ namespace Dolgozok
         public jelszo_emlekezteto()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Size = new System.Drawing.Size(300, 176);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -97,6 +101,12 @@ namespace Dolgozok
             this.Hide();
             Login log = new Login();
             log.Show();
+        }
+
+        private void jelszo_emlekezteto_Resize(object sender, EventArgs e)
+        {
+
+            this.Size = new System.Drawing.Size(300, 176);
         }
     }
 }

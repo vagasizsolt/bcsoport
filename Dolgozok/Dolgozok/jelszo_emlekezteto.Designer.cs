@@ -70,6 +70,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "jelszo_emlekezteto";
             this.Text = "jelszo_emlekezteto";
+            this.Resize += new System.EventHandler(this.jelszo_emlekezteto_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
