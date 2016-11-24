@@ -263,13 +263,36 @@ namespace Dolgozok
                     ctrl.BackColor = Color.White;
                 }
             }
+
+            richTextBox1.Visible = false;
         }
 
         private void keresbutton_Click(object sender, EventArgs e)
         {
-            string nev = textBox1.Text;
-            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where Nev=" + nev);
+            string mit = textBox1.Text;
+            string mialapjan = comboBox1.Text;
+            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
+            if (reader.HasRows == true)
+            {
+                while (reader.Read())
+                {
+                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                    reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                    System.Drawing.Image kepX = new Bitmap(eleres);
+                    pictureBox1.Image = kepX;
+                }
+            }
             
+        }
+
+        private void faliújságMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Visible = true;
         }
 
 

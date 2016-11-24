@@ -50,6 +50,7 @@
             this.vágólapraMásolásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.névjegyNyomtatásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faliújságraÍrásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.körÜzenetÍrásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nézetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaNézetMegjelenítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faliújságMegjelenítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,7 @@
             this.aktivlogin = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.keresbutton = new System.Windows.Forms.Button();
-            this.körÜzenetÍrásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -247,6 +248,12 @@
             this.faliújságraÍrásToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.faliújságraÍrásToolStripMenuItem.Text = "Faliújságra írás";
             // 
+            // körÜzenetÍrásaToolStripMenuItem
+            // 
+            this.körÜzenetÍrásaToolStripMenuItem.Name = "körÜzenetÍrásaToolStripMenuItem";
+            this.körÜzenetÍrásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.körÜzenetÍrásaToolStripMenuItem.Text = "Kör üzenet írása";
+            // 
             // nézetToolStripMenuItem
             // 
             this.nézetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -267,11 +274,12 @@
             this.faliújságMegjelenítéseToolStripMenuItem.Name = "faliújságMegjelenítéseToolStripMenuItem";
             this.faliújságMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.faliújságMegjelenítéseToolStripMenuItem.Text = "Faliújság megjelenítése";
+            this.faliújságMegjelenítéseToolStripMenuItem.Click += new System.EventHandler(this.faliújságMegjelenítéseToolStripMenuItem_Click);
             // 
             // támogatásToolStripMenuItem
             // 
             this.támogatásToolStripMenuItem.Name = "támogatásToolStripMenuItem";
-            this.támogatásToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.támogatásToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.támogatásToolStripMenuItem.Text = "Támogatás";
             this.támogatásToolStripMenuItem.Click += new System.EventHandler(this.támogatásToolStripMenuItem_Click);
             // 
@@ -314,9 +322,9 @@
             "ID",
             "Nev",
             "Részleg",
-            "Beosztás",
+            "Beosztas",
             "Email",
-            "Telefonszám"});
+            "Telefonszam"});
             this.comboBox1.Location = new System.Drawing.Point(404, 67);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(110, 21);
@@ -360,11 +368,13 @@
             this.keresbutton.UseVisualStyleBackColor = true;
             this.keresbutton.Click += new System.EventHandler(this.keresbutton_Click);
             // 
-            // körÜzenetÍrásaToolStripMenuItem
+            // richTextBox1
             // 
-            this.körÜzenetÍrásaToolStripMenuItem.Name = "körÜzenetÍrásaToolStripMenuItem";
-            this.körÜzenetÍrásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.körÜzenetÍrásaToolStripMenuItem.Text = "Kör üzenet írása";
+            this.richTextBox1.Location = new System.Drawing.Point(500, 122);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(228, 209);
+            this.richTextBox1.TabIndex = 25;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
@@ -372,6 +382,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(798, 487);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.keresbutton);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.aktivlogin);
@@ -446,6 +457,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button keresbutton;
         private System.Windows.Forms.ToolStripMenuItem körÜzenetÍrásaToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
