@@ -78,6 +78,7 @@
             this.jelszo_textBox.PasswordChar = '*';
             this.jelszo_textBox.Size = new System.Drawing.Size(100, 20);
             this.jelszo_textBox.TabIndex = 4;
+            this.jelszo_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.jelszo_textBox_KeyPress);
             // 
             // button1
             // 
