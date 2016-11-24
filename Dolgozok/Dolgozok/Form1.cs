@@ -268,6 +268,8 @@ namespace Dolgozok
             }
 
             richTextBox1.Visible = false;
+            bejegyzesbox.Visible = false;
+            bejegyzes.Visible = false;
         }
 
         private void keresbutton_Click(object sender, EventArgs e)
@@ -296,6 +298,8 @@ namespace Dolgozok
         private void faliújságMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Visible = true;
+            bejegyzesbox.Visible = true;
+            bejegyzes.Visible = true;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -310,8 +314,14 @@ namespace Dolgozok
             SQLiteDataReader writer = db.Lekerdezes("insert into Faliujsag (Szoveg,Modositotta,D_ID) values ('" 
                 + bejegyzesbox.Text + "','" + aktivlogin.Text + "','" + ID_textbox.Text + "')");
 
-
             System.Windows.Forms.MessageBox.Show("Bejegyzés sikeres!");
+
+            SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag inner join Dolgozok ON Dolgozok.ID=Faliujsag.D_ID");
+
+            while (reader.Read())
+            {
+                richTextBox1.Text = reader.GetValue(1).ToString() + System.Environment.NewLine + reader.GetValue(2).ToString();
+            }
         }
 
 

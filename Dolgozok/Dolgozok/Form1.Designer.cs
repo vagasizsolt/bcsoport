@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.bejegyzes = new System.Windows.Forms.Button();
             this.bejegyzesbox = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -336,7 +338,7 @@
             // aktivlogin
             // 
             this.aktivlogin.AutoSize = true;
-            this.aktivlogin.Location = new System.Drawing.Point(706, 9);
+            this.aktivlogin.Location = new System.Drawing.Point(715, 9);
             this.aktivlogin.Name = "aktivlogin";
             this.aktivlogin.Size = new System.Drawing.Size(42, 13);
             this.aktivlogin.TabIndex = 20;
@@ -387,6 +389,11 @@
             this.bejegyzesbox.Size = new System.Drawing.Size(228, 58);
             this.bejegyzesbox.TabIndex = 27;
             this.bejegyzesbox.Text = "";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -474,6 +481,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button bejegyzes;
         private System.Windows.Forms.RichTextBox bejegyzesbox;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
