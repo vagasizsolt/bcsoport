@@ -305,20 +305,13 @@ namespace Dolgozok
             this.Size = new System.Drawing.Size(815, 525);
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void bejegyzes_Click(object sender, EventArgs e)
         {
-            int j = i + 1;
-            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where ID=" + j);
-            while (reader.Read())
-            {
-                ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
-                beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+            SQLiteDataReader writer = db.Lekerdezes("insert into Faliujsag (Szoveg,Modositotta,D_ID) values ('" 
+                + bejegyzesbox.Text + "','" + aktivlogin.Text + "','" + ID_textbox.Text + "')");
 
-            }
+
+            System.Windows.Forms.MessageBox.Show("Bejegyzés sikeres!");
         }
 
 

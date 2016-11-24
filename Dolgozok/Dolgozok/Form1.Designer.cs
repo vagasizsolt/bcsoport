@@ -49,7 +49,6 @@
             this.jegyzettömbbenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vágólapraMásolásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.névjegyNyomtatásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faliújságraÍrásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.körÜzenetÍrásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nézetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaNézetMegjelenítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +65,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.keresbutton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.bejegyzes = new System.Windows.Forms.Button();
+            this.bejegyzesbox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -215,7 +216,6 @@
             this.jegyzettömbbenToolStripMenuItem,
             this.vágólapraMásolásToolStripMenuItem,
             this.névjegyNyomtatásaToolStripMenuItem,
-            this.faliújságraÍrásToolStripMenuItem,
             this.körÜzenetÍrásaToolStripMenuItem});
             this.megjelenítésToolStripMenuItem.Name = "megjelenítésToolStripMenuItem";
             this.megjelenítésToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
@@ -241,12 +241,6 @@
             this.névjegyNyomtatásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.névjegyNyomtatásaToolStripMenuItem.Text = "Névjegy nyomtatása";
             this.névjegyNyomtatásaToolStripMenuItem.Click += new System.EventHandler(this.névjegyNyomtatásaToolStripMenuItem_Click);
-            // 
-            // faliújságraÍrásToolStripMenuItem
-            // 
-            this.faliújságraÍrásToolStripMenuItem.Name = "faliújságraÍrásToolStripMenuItem";
-            this.faliújságraÍrásToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.faliújságraÍrásToolStripMenuItem.Text = "Faliújságra írás";
             // 
             // körÜzenetÍrásaToolStripMenuItem
             // 
@@ -279,7 +273,7 @@
             // támogatásToolStripMenuItem
             // 
             this.támogatásToolStripMenuItem.Name = "támogatásToolStripMenuItem";
-            this.támogatásToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.támogatásToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.támogatásToolStripMenuItem.Text = "Támogatás";
             this.támogatásToolStripMenuItem.Click += new System.EventHandler(this.támogatásToolStripMenuItem_Click);
             // 
@@ -375,7 +369,24 @@
             this.richTextBox1.Size = new System.Drawing.Size(228, 209);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // bejegyzes
+            // 
+            this.bejegyzes.Location = new System.Drawing.Point(562, 420);
+            this.bejegyzes.Name = "bejegyzes";
+            this.bejegyzes.Size = new System.Drawing.Size(109, 23);
+            this.bejegyzes.TabIndex = 26;
+            this.bejegyzes.Text = "Bejegyzés írása";
+            this.bejegyzes.UseVisualStyleBackColor = true;
+            this.bejegyzes.Click += new System.EventHandler(this.bejegyzes_Click);
+            // 
+            // bejegyzesbox
+            // 
+            this.bejegyzesbox.Location = new System.Drawing.Point(500, 347);
+            this.bejegyzesbox.Name = "bejegyzesbox";
+            this.bejegyzesbox.Size = new System.Drawing.Size(228, 58);
+            this.bejegyzesbox.TabIndex = 27;
+            this.bejegyzesbox.Text = "";
             // 
             // Form1
             // 
@@ -383,6 +394,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(799, 487);
+            this.Controls.Add(this.bejegyzesbox);
+            this.Controls.Add(this.bejegyzes);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.keresbutton);
             this.Controls.Add(this.checkBox1);
@@ -450,7 +463,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ToolStripMenuItem faliújságraÍrásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nézetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaNézetMegjelenítéseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faliújságMegjelenítéseToolStripMenuItem;
@@ -460,6 +472,8 @@
         private System.Windows.Forms.Button keresbutton;
         private System.Windows.Forms.ToolStripMenuItem körÜzenetÍrásaToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button bejegyzes;
+        private System.Windows.Forms.RichTextBox bejegyzesbox;
     }
 }
 

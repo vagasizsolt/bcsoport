@@ -70,7 +70,6 @@
             this.felhasznalonev_textBox.Name = "felhasznalonev_textBox";
             this.felhasznalonev_textBox.Size = new System.Drawing.Size(100, 20);
             this.felhasznalonev_textBox.TabIndex = 3;
-            this.felhasznalonev_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.felhasznalonev_textBox_KeyPress);
             // 
             // jelszo_textBox
             // 
@@ -79,7 +78,6 @@
             this.jelszo_textBox.PasswordChar = '*';
             this.jelszo_textBox.Size = new System.Drawing.Size(100, 20);
             this.jelszo_textBox.TabIndex = 4;
-            this.jelszo_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.jelszo_textBox_KeyPress);
             // 
             // button1
             // 
