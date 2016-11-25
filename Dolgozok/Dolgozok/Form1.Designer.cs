@@ -70,6 +70,7 @@
             this.bejegyzesbox = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.frissbutton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -265,6 +266,7 @@
             this.listaNézetMegjelenítéseToolStripMenuItem.Name = "listaNézetMegjelenítéseToolStripMenuItem";
             this.listaNézetMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.listaNézetMegjelenítéseToolStripMenuItem.Text = "Lista nézet megjelenítése";
+            this.listaNézetMegjelenítéseToolStripMenuItem.Click += new System.EventHandler(this.listaNézetMegjelenítéseToolStripMenuItem_Click);
             // 
             // faliújságMegjelenítéseToolStripMenuItem
             // 
@@ -406,12 +408,21 @@
             this.frissbutton.UseVisualStyleBackColor = true;
             this.frissbutton.Click += new System.EventHandler(this.frissbutton_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(89, 386);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(362, 95);
+            this.listBox1.TabIndex = 29;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(799, 478);
+            this.ClientSize = new System.Drawing.Size(799, 493);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.frissbutton);
             this.Controls.Add(this.bejegyzesbox);
             this.Controls.Add(this.bejegyzes);
@@ -495,6 +506,7 @@
         private System.Windows.Forms.RichTextBox bejegyzesbox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button frissbutton;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

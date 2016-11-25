@@ -362,6 +362,30 @@ namespace Dolgozok
 
         }
 
+        private void listaNézetMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok");
+
+            List<string> elemek = new List<string>();
+
+            if (reader.HasRows == true)
+            {
+                i++;
+                while (reader.Read())
+                {
+                    elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + System.Environment.NewLine);
+                }
+            }
+
+            for (int i = 0; i < elemek.Count(); i++)
+            {
+                listBox1.Items.Add(elemek[i]);
+            }
+            
+        }
+
+
+
 
 
 
