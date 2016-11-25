@@ -27,6 +27,7 @@ namespace Dolgozok
 
         Adatbazis db = Adatbazis.GetPeldany();
         int i = 1;
+        int n = 1;
         public Form1()
         {
             InitializeComponent();
@@ -62,7 +63,7 @@ namespace Dolgozok
         {
             int j = i + 1;
             SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where ID=" + j);
-            if(reader.HasRows==true)
+            if (reader.HasRows == true)
             {
                 i++;
                 while (reader.Read())
@@ -78,8 +79,10 @@ namespace Dolgozok
                     pictureBox1.Image = kepX;
                 }
             }
-            
+
         }
+            
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -270,6 +273,7 @@ namespace Dolgozok
             richTextBox1.Visible = false;
             bejegyzesbox.Visible = false;
             bejegyzes.Visible = false;
+            frissbutton.Visible = false;
         }
 
         private void keresbutton_Click(object sender, EventArgs e)
@@ -300,29 +304,60 @@ namespace Dolgozok
             richTextBox1.Visible = true;
             bejegyzesbox.Visible = true;
             bejegyzes.Visible = true;
+            frissbutton.Visible = true;
+            SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag inner join Dolgozok ON Dolgozok.ID=Faliujsag.D_ID");
+
+            List<string> result = new List<string>();
+
+
+            if (reader.HasRows == true)
+            {
+                while (reader.Read())
+                {
+                    result.Add(reader.GetValue(1).ToString() + System.Environment.NewLine + reader.GetValue(2).ToString() + System.Environment.NewLine);
+                }
+            }
+
+            richTextBox1.Text = String.Join(System.Environment.NewLine, result);
+
+
+
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
 
-
             this.Size = new System.Drawing.Size(815, 525);
         }
+
 
         private void bejegyzes_Click(object sender, EventArgs e)
         {
             SQLiteDataReader writer = db.Lekerdezes("insert into Faliujsag (Szoveg,Modositotta,D_ID) values ('" 
                 + bejegyzesbox.Text + "','" + aktivlogin.Text + "','" + ID_textbox.Text + "')");
 
-            System.Windows.Forms.MessageBox.Show("Bejegyzés sikeres!");
+            System.Windows.Forms.MessageBox.Show("Bejegyzés sikeres!");            
+            
+        }
 
+        private void frissbutton_Click(object sender, EventArgs e)
+        {
             SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag inner join Dolgozok ON Dolgozok.ID=Faliujsag.D_ID");
 
-            while (reader.Read())
+            List<string> result_friss = new List<string>();
+
+            if (reader.HasRows == true)
             {
-                richTextBox1.Text = reader.GetValue(1).ToString() + System.Environment.NewLine + reader.GetValue(2).ToString();
+                while (reader.Read())
+                {
+                    result_friss.Add(reader.GetValue(1).ToString() + System.Environment.NewLine + reader.GetValue(2).ToString() + System.Environment.NewLine);
+                }
             }
+
+            richTextBox1.Text = String.Join(System.Environment.NewLine, result_friss);
         }
+
+
 
 
     }
