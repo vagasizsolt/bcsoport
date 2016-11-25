@@ -174,7 +174,7 @@
             // 
             // kovetkezo_button
             // 
-            this.kovetkezo_button.Location = new System.Drawing.Point(290, 356);
+            this.kovetkezo_button.Location = new System.Drawing.Point(290, 335);
             this.kovetkezo_button.Name = "kovetkezo_button";
             this.kovetkezo_button.Size = new System.Drawing.Size(75, 23);
             this.kovetkezo_button.TabIndex = 12;
@@ -184,7 +184,7 @@
             // 
             // elozo_button
             // 
-            this.elozo_button.Location = new System.Drawing.Point(137, 356);
+            this.elozo_button.Location = new System.Drawing.Point(128, 335);
             this.elozo_button.Name = "elozo_button";
             this.elozo_button.Size = new System.Drawing.Size(75, 23);
             this.elozo_button.TabIndex = 13;
@@ -194,9 +194,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(310, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(301, 125);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 163);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 188);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -371,13 +371,13 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(500, 122);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(228, 209);
+            this.richTextBox1.Size = new System.Drawing.Size(228, 236);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
             // 
             // bejegyzes
             // 
-            this.bejegyzes.Location = new System.Drawing.Point(512, 419);
+            this.bejegyzes.Location = new System.Drawing.Point(500, 448);
             this.bejegyzes.Name = "bejegyzes";
             this.bejegyzes.Size = new System.Drawing.Size(109, 23);
             this.bejegyzes.TabIndex = 26;
@@ -387,7 +387,7 @@
             // 
             // bejegyzesbox
             // 
-            this.bejegyzesbox.Location = new System.Drawing.Point(500, 347);
+            this.bejegyzesbox.Location = new System.Drawing.Point(500, 376);
             this.bejegyzesbox.Name = "bejegyzesbox";
             this.bejegyzesbox.Size = new System.Drawing.Size(228, 58);
             this.bejegyzesbox.TabIndex = 27;
@@ -400,7 +400,7 @@
             // 
             // frissbutton
             // 
-            this.frissbutton.Location = new System.Drawing.Point(653, 419);
+            this.frissbutton.Location = new System.Drawing.Point(653, 448);
             this.frissbutton.Name = "frissbutton";
             this.frissbutton.Size = new System.Drawing.Size(75, 23);
             this.frissbutton.TabIndex = 28;
@@ -411,10 +411,11 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(89, 386);
+            this.listBox1.Location = new System.Drawing.Point(43, 376);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(362, 95);
+            this.listBox1.Size = new System.Drawing.Size(388, 95);
             this.listBox1.TabIndex = 29;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Form1
             // 

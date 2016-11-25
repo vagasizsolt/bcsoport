@@ -277,6 +277,7 @@ namespace Dolgozok
             bejegyzesbox.Visible = false;
             bejegyzes.Visible = false;
             frissbutton.Visible = false;
+            listBox1.Visible = false;
         }
 
         private void keresbutton_Click(object sender, EventArgs e)
@@ -362,27 +363,61 @@ namespace Dolgozok
 
         }
 
+        private bool listanezetklikk = false;
+
         private void listaNézetMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            listBox1.Visible = true;
+
+            
             SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok");
 
             List<string> elemek = new List<string>();
 
+            if(listanezetklikk == false)
+            {
+                if (reader.HasRows == true)
+                {
+                    i++;
+                    while (reader.Read())
+                    {
+                        elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
+                            + " " + reader.GetValue(3).ToString() +  System.Environment.NewLine + " ");
+                    }
+                }
+
+                for (int i = 0; i < elemek.Count(); i++)
+                {
+                    listBox1.Items.Add(elemek[i]);
+                    listanezetklikk = true;
+                }
+            }          
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex + 1;
+            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where ID=" + index);
             if (reader.HasRows == true)
             {
-                i++;
                 while (reader.Read())
                 {
-                    elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + System.Environment.NewLine);
+                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                    reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                    System.Drawing.Image kepX = new Bitmap(eleres);
+                    pictureBox1.Image = kepX;
+
+                    richTextBox1.Text = "";
                 }
             }
-
-            for (int i = 0; i < elemek.Count(); i++)
-            {
-                listBox1.Items.Add(elemek[i]);
-            }
-            
         }
+
+        
 
 
 
