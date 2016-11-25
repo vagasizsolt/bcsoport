@@ -284,23 +284,41 @@ namespace Dolgozok
         {
             string mit = textBox1.Text;
             string mialapjan = comboBox1.Text;
-            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
-            if (reader.HasRows == true)
+
+            List<string> elemek = new List<string>();
+
+            listBox1.Items.Clear();
+
+            if(checkBox1.CheckState == CheckState.Checked)
             {
-                while (reader.Read())
+                SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
+                if (reader.HasRows == true)
                 {
-                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                    reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
-                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                    System.Drawing.Image kepX = new Bitmap(eleres);
-                    pictureBox1.Image = kepX;
+                    while (reader.Read())
+                    {
+                        ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                        nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                        reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                        telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                        string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                        System.Drawing.Image kepX = new Bitmap(eleres);
+                        pictureBox1.Image = kepX;
+
+                        listBox1.Visible = true;
+
+                        elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
+                                        + " " + reader.GetValue(3).ToString() + System.Environment.NewLine + " ");
+                    }
+                    for (int i = 0; i < elemek.Count(); i++)
+                    {
+                        listBox1.Items.Add(elemek[i]);
+                        listanezetklikk = true;
+                    }
                 }
             }
-            
+           
         }
 
         private void faliújságMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
