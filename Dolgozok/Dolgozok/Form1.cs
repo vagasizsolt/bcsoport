@@ -27,7 +27,6 @@ namespace Dolgozok
 
         Adatbazis db = Adatbazis.GetPeldany();
         int i = 1;
-        int n = 1;
         public Form1()
         {
             InitializeComponent();
@@ -77,6 +76,8 @@ namespace Dolgozok
                     string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
                     System.Drawing.Image kepX = new Bitmap(eleres);
                     pictureBox1.Image = kepX;
+
+                    richTextBox1.Text = "";
                 }
             }
 
@@ -102,6 +103,8 @@ namespace Dolgozok
                     string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
                     System.Drawing.Image kepX = new Bitmap(eleres);
                     pictureBox1.Image = kepX;
+
+                    richTextBox1.Text = "";
                 }
             }
         }
@@ -305,20 +308,19 @@ namespace Dolgozok
             bejegyzesbox.Visible = true;
             bejegyzes.Visible = true;
             frissbutton.Visible = true;
-            SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag inner join Dolgozok ON Dolgozok.ID=Faliujsag.D_ID");
+            SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag WHERE'" + ID_textbox.Text + "'=D_ID");
 
-            List<string> result = new List<string>();
-
+            List<string> result_friss = new List<string>();
 
             if (reader.HasRows == true)
             {
                 while (reader.Read())
                 {
-                    result.Add(reader.GetValue(1).ToString() + System.Environment.NewLine + reader.GetValue(2).ToString() + System.Environment.NewLine);
+                    result_friss.Add(reader.GetValue(1).ToString() + System.Environment.NewLine + reader.GetValue(2).ToString() + System.Environment.NewLine);
                 }
             }
 
-            richTextBox1.Text = String.Join(System.Environment.NewLine, result);
+            richTextBox1.Text = String.Join(System.Environment.NewLine, result_friss);
 
 
 
@@ -342,7 +344,7 @@ namespace Dolgozok
 
         private void frissbutton_Click(object sender, EventArgs e)
         {
-            SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag inner join Dolgozok ON Dolgozok.ID=Faliujsag.D_ID");
+            SQLiteDataReader reader = db.Lekerdezes("select * from Faliujsag WHERE'" + ID_textbox.Text +"'=D_ID");
 
             List<string> result_friss = new List<string>();
 
@@ -355,6 +357,9 @@ namespace Dolgozok
             }
 
             richTextBox1.Text = String.Join(System.Environment.NewLine, result_friss);
+
+
+
         }
 
 
