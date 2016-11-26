@@ -71,6 +71,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.frissbutton = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.összesElrejtéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -256,7 +257,8 @@
             // 
             this.nézetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaNézetMegjelenítéseToolStripMenuItem,
-            this.faliújságMegjelenítéseToolStripMenuItem});
+            this.faliújságMegjelenítéseToolStripMenuItem,
+            this.összesElrejtéseToolStripMenuItem});
             this.nézetToolStripMenuItem.Name = "nézetToolStripMenuItem";
             this.nézetToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.nézetToolStripMenuItem.Text = "Nézet";
@@ -417,6 +419,13 @@
             this.listBox1.TabIndex = 29;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // összesElrejtéseToolStripMenuItem
+            // 
+            this.összesElrejtéseToolStripMenuItem.Name = "összesElrejtéseToolStripMenuItem";
+            this.összesElrejtéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.összesElrejtéseToolStripMenuItem.Text = "Összes elrejtése";
+            this.összesElrejtéseToolStripMenuItem.Click += new System.EventHandler(this.összesElrejtéseToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,6 +517,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button frissbutton;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem összesElrejtéseToolStripMenuItem;
     }
 }
 

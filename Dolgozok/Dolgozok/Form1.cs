@@ -37,6 +37,7 @@ namespace Dolgozok
             beosztas_textbox.ReadOnly = true;
             email_textbox.ReadOnly = true;
             telefonszam_textbox.ReadOnly = true;
+            richTextBox1.ReadOnly = true;
 
             while (reader.Read())
             {
@@ -164,6 +165,12 @@ namespace Dolgozok
                 checkBox1.Visible = false;
                 aktivlogin.Visible = false;
                 keresbutton.Visible = false;
+                listBox1.Visible = false;
+                richTextBox1.Visible = false;
+                bejegyzesbox.Visible = false;
+                bejegyzes.Visible = false;
+                frissbutton.Visible = false;
+
                 this.FormBorderStyle = FormBorderStyle.None;
 
                 System.Drawing.Rectangle bounds = this.Bounds;
@@ -210,6 +217,11 @@ namespace Dolgozok
                 checkBox1.Visible = true;
                 aktivlogin.Visible = true;
                 keresbutton.Visible = true;
+                listBox1.Visible = true;
+                richTextBox1.Visible = true;
+                bejegyzesbox.Visible = true;
+                bejegyzes.Visible = true;
+                frissbutton.Visible = true;
                 this.FormBorderStyle = FormBorderStyle.Fixed3D;
             }
         }
@@ -230,6 +242,11 @@ namespace Dolgozok
                     checkBox1.Visible = true;
                     aktivlogin.Visible = true;
                     keresbutton.Visible = true;
+                    listBox1.Visible = false;
+                    richTextBox1.Visible = true;
+                    bejegyzesbox.Visible = true;
+                    bejegyzes.Visible = true;
+                    frissbutton.Visible = true;
                     this.FormBorderStyle = FormBorderStyle.Fixed3D;
                     return true;
                 }
@@ -289,36 +306,73 @@ namespace Dolgozok
 
             listBox1.Items.Clear();
 
-            if(checkBox1.CheckState == CheckState.Checked)
+            if (textBox1.Text=="" ||comboBox1.Text=="")
             {
-                SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
-                if (reader.HasRows == true)
+                MessageBox.Show("Kérem írja be, hogy mit vagy mi alapján szeretne keresni");
+
+            }
+            else
+            {
+                if (checkBox1.CheckState == CheckState.Checked)
                 {
-                    while (reader.Read())
+                    SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
+                    if (reader.HasRows == true)
                     {
-                        ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                        nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                        reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
-                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                        email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                        telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-                        string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                        System.Drawing.Image kepX = new Bitmap(eleres);
-                        pictureBox1.Image = kepX;
+                        while (reader.Read())
+                        {
+                            ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                            nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                            reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                            beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                            email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                            telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                            string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                            System.Drawing.Image kepX = new Bitmap(eleres);
+                            pictureBox1.Image = kepX;
 
-                        listBox1.Visible = true;
+                            listBox1.Visible = true;
 
-                        elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
-                                        + " " + reader.GetValue(3).ToString() + System.Environment.NewLine + " ");
+                            elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
+                                            + " " + reader.GetValue(3).ToString() + System.Environment.NewLine + " ");
+                        }
+                        for (int i = 0; i < elemek.Count(); i++)
+                        {
+                            listBox1.Items.Add(elemek[i]);
+                            listanezetklikk = true;
+                        }
                     }
-                    for (int i = 0; i < elemek.Count(); i++)
+                    if (elemek.Count() == 0)
                     {
-                        listBox1.Items.Add(elemek[i]);
-                        listanezetklikk = true;
+                        MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
                     }
                 }
-            }
-           
+                else
+                {
+                    if (checkBox1.CheckState == CheckState.Unchecked)
+                    {
+                        SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " LIKE'%" + mit + "%'");
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                listBox1.Visible = true;
+
+                                elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
+                                                + " " + reader.GetValue(3).ToString() + System.Environment.NewLine + " ");
+                            }
+                            for (int i = 0; i < elemek.Count(); i++)
+                            {
+                                listBox1.Items.Add(elemek[i]);
+                                listanezetklikk = true;
+                            }
+                        }
+                        if (elemek.Count() == 0)
+                        {
+                            MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                        }
+                    }
+                }                               
+            }                      
         }
 
         private void faliújságMegjelenítéseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -433,6 +487,15 @@ namespace Dolgozok
                     richTextBox1.Text = "";
                 }
             }
+        }
+
+        private void összesElrejtéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listBox1.Visible = false;
+            richTextBox1.Visible = false;
+            bejegyzesbox.Visible = false;
+            bejegyzes.Visible = false;
+            frissbutton.Visible = false;
         }
 
         
