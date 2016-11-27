@@ -176,3 +176,4 @@ C:\Users\User\Documents\RFT\bcsoport\Dolgozok\Dolgozok\obj\Debug\Dolgozok.csproj
 C:\Users\User\Desktop\bcsoport\Dolgozok\Dolgozok\bin\Debug\Dolgozok.exe.config
 C:\Users\User\Desktop\bcsoport\Dolgozok\Dolgozok\obj\Debug\Dolgozok.exe
 C:\Users\User\Desktop\bcsoport\Dolgozok\Dolgozok\obj\Debug\Dolgozok.pdb
+C:\Users\gyurm\Desktop\rft\Dolgozok\bcsoport\Dolgozok\Dolgozok\obj\Debug\Dolgozok.uzenet.resources

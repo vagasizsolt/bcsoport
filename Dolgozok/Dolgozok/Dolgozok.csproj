@@ -99,6 +99,12 @@
     <Compile Include="tamogatas.Designer.cs">
       <DependentUpon>tamogatas.cs</DependentUpon>
     </Compile>
+    <Compile Include="uzenet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uzenet.Designer.cs">
+      <DependentUpon>uzenet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="tamogatas.resx">
       <DependentUpon>tamogatas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uzenet.resx">
+      <DependentUpon>uzenet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config">
       <SubType>Designer</SubType>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using System.Net;
 using System.Net.Mail;
 
@@ -20,7 +21,7 @@ namespace Dolgozok
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new System.Drawing.Size(545, 300);
+            this.Size = new System.Drawing.Size(650, 350);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,7 +75,7 @@ namespace Dolgozok
         private void tamogatas_Resize(object sender, EventArgs e)
         {
 
-            this.Size = new System.Drawing.Size(545, 300);
+            this.Size = new System.Drawing.Size(650, 350);
         }
 
     }

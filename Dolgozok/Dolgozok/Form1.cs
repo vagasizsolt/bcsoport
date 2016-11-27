@@ -23,10 +23,12 @@ namespace Dolgozok
     {
         private bool nevjegyNyomtatasMod = false;
 
-
-
         Adatbazis db = Adatbazis.GetPeldany();
         int i = 1;
+
+        public static string cimzett = "";
+        public static string cimzettnev = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -51,13 +53,19 @@ namespace Dolgozok
                 string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
                 System.Drawing.Image kepX = new Bitmap(eleres);
                 pictureBox1.Image = kepX;
+
+                cimzett = email_textbox.Text;
+                cimzettnev = nev_textbox.Text;
             }
+
+
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new System.Drawing.Size(815, 525);
 
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -78,7 +86,11 @@ namespace Dolgozok
                     System.Drawing.Image kepX = new Bitmap(eleres);
                     pictureBox1.Image = kepX;
 
+                    cimzett = email_textbox.Text;
+                    cimzettnev = nev_textbox.Text;
+
                     richTextBox1.Text = "";
+
                 }
             }
 
@@ -104,6 +116,9 @@ namespace Dolgozok
                     string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
                     System.Drawing.Image kepX = new Bitmap(eleres);
                     pictureBox1.Image = kepX;
+
+                    cimzett = email_textbox.Text;
+                    cimzettnev = nev_textbox.Text;
 
                     richTextBox1.Text = "";
                 }
@@ -499,9 +514,12 @@ namespace Dolgozok
         }
 
         
-
-
-
+        private void üzenetÍrásaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            uzenet uzenet = new uzenet();
+            uzenet.Show();
+        }
 
 
 
