@@ -54,6 +54,7 @@ namespace Dolgozok
                 {
                     string felh_nev = "";
                     string pw = "";
+                    int id;
                     if (felhasznalo.Read())
                     {
                         felh_nev = felhasznalo.GetValue(7).ToString();
@@ -66,10 +67,25 @@ namespace Dolgozok
                     }
                     else
                     {
-                        loginnev = felh_nev;
-                        this.Hide();
-                        Form1 user = new Form1();
-                        user.Show();
+                        id = felhasznalo.GetInt16(0);
+                        SQLiteDataReader admin = db.Lekerdezes("select * from Admin where Dolg_ID=" + id );
+                        if (admin.HasRows)
+                        {
+                            // adminként lép be
+                            loginnev = felh_nev;
+                            this.Hide();
+                            Form1 user = new Form1();
+                            user.Show();
+                        }
+                        else 
+                        {
+                            //felhasználó módban lép be
+                            loginnev = felh_nev;
+                            this.Hide();
+                            Form1 user = new Form1();
+                            user.Show();
+                        }
+                        
                     }
 
 
