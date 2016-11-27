@@ -62,7 +62,7 @@ namespace Dolgozok
                 message.From = new MailAddress("tamogatas.dolgozoadatbazis@gmail.com");
                 message.To.Add(new MailAddress(Form1.cimzett));
                 message.Subject = textBox1.Text;
-                message.Body = richTextBox1.Text + Environment.NewLine +  "Ezt az üzenetet" + (Login.loginnev) + " küldte Önnek";
+                message.Body = richTextBox1.Text + Environment.NewLine +  "Ezt az üzenetet " + (Login.loginnev) + " küldte Önnek";
 
                 smtp.Port = 587;
                 smtp.Host = "smtp.gmail.com";
