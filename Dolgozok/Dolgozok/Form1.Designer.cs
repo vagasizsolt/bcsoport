@@ -350,7 +350,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
             "Nev",
-            "Részleg",
+            "Reszleg",
             "Beosztas",
             "Email",
             "Telefonszam"});
