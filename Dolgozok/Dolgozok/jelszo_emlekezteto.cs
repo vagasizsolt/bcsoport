@@ -27,7 +27,7 @@ namespace Dolgozok
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new System.Drawing.Size(300, 176);
+            this.Size = new System.Drawing.Size(350, 220);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace Dolgozok
         private void jelszo_emlekezteto_Resize(object sender, EventArgs e)
         {
 
-            this.Size = new System.Drawing.Size(300, 176);
+            this.Size = new System.Drawing.Size(350, 220);
         }
     }
 }

@@ -74,22 +74,28 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(284, 293);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Küldés";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // visszabutton
             // 
+            this.visszabutton.BackColor = System.Drawing.Color.White;
+            this.visszabutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.visszabutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.visszabutton.Location = new System.Drawing.Point(32, 293);
             this.visszabutton.Name = "visszabutton";
             this.visszabutton.Size = new System.Drawing.Size(55, 23);
             this.visszabutton.TabIndex = 7;
             this.visszabutton.Text = "Vissza";
-            this.visszabutton.UseVisualStyleBackColor = true;
+            this.visszabutton.UseVisualStyleBackColor = false;
             this.visszabutton.Click += new System.EventHandler(this.visszabutton_Click);
             // 
             // textBox2

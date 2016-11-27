@@ -174,7 +174,7 @@ namespace Dolgozok
                 menuStrip1.Visible = false;
                 elozo_button.Visible = false;
                 kovetkezo_button.Visible = false;
-                label7.Visible = false;
+                pictureBox2.Visible = false;
                 textBox1.Visible = false;
                 comboBox1.Visible = false;
                 checkBox1.Visible = false;
@@ -226,7 +226,7 @@ namespace Dolgozok
                 menuStrip1.Visible = true;
                 elozo_button.Visible = true;
                 kovetkezo_button.Visible = true;
-                label7.Visible = true;
+                pictureBox2.Visible = true;
                 textBox1.Visible = true;
                 comboBox1.Visible = true;
                 checkBox1.Visible = true;
@@ -251,7 +251,7 @@ namespace Dolgozok
                     menuStrip1.Visible = true;
                     elozo_button.Visible = true;
                     kovetkezo_button.Visible = true;
-                    label7.Visible = true;
+                    pictureBox2.Visible = true;
                     textBox1.Visible = true;
                     comboBox1.Visible = true;
                     checkBox1.Visible = true;

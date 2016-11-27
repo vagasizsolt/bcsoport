@@ -44,7 +44,6 @@
             this.telefonszam_textbox = new System.Windows.Forms.TextBox();
             this.kovetkezo_button = new System.Windows.Forms.Button();
             this.elozo_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.megjelenítésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jegyzettömbbenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +62,6 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.aktivlogin = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.keresbutton = new System.Windows.Forms.Button();
@@ -73,8 +71,11 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.frissbutton = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -176,35 +177,34 @@
             // 
             // kovetkezo_button
             // 
+            this.kovetkezo_button.BackColor = System.Drawing.Color.White;
+            this.kovetkezo_button.FlatAppearance.BorderSize = 3;
+            this.kovetkezo_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.kovetkezo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kovetkezo_button.Location = new System.Drawing.Point(290, 335);
             this.kovetkezo_button.Name = "kovetkezo_button";
-            this.kovetkezo_button.Size = new System.Drawing.Size(75, 23);
+            this.kovetkezo_button.Size = new System.Drawing.Size(92, 23);
             this.kovetkezo_button.TabIndex = 12;
-            this.kovetkezo_button.Text = "Koveztkezo";
-            this.kovetkezo_button.UseVisualStyleBackColor = true;
+            this.kovetkezo_button.Text = "Koveztkező";
+            this.kovetkezo_button.UseVisualStyleBackColor = false;
             this.kovetkezo_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // elozo_button
             // 
+            this.elozo_button.BackColor = System.Drawing.Color.White;
+            this.elozo_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.elozo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.elozo_button.Location = new System.Drawing.Point(128, 335);
             this.elozo_button.Name = "elozo_button";
             this.elozo_button.Size = new System.Drawing.Size(75, 23);
             this.elozo_button.TabIndex = 13;
-            this.elozo_button.Text = "Elozo";
-            this.elozo_button.UseVisualStyleBackColor = true;
+            this.elozo_button.Text = "Előző";
+            this.elozo_button.UseVisualStyleBackColor = false;
             this.elozo_button.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(301, 125);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 188);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.PaleGreen;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.megjelenítésToolStripMenuItem,
             this.nézetToolStripMenuItem,
@@ -224,12 +224,14 @@
             this.névjegyNyomtatásaToolStripMenuItem,
             this.körÜzenetÍrásaToolStripMenuItem,
             this.üzenetÍrásaToolStripMenuItem});
+            this.megjelenítésToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.megjelenítésToolStripMenuItem.Name = "megjelenítésToolStripMenuItem";
-            this.megjelenítésToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.megjelenítésToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.megjelenítésToolStripMenuItem.Text = "Műveletek";
             // 
             // jegyzettömbbenToolStripMenuItem
             // 
+            this.jegyzettömbbenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.jegyzettömbbenToolStripMenuItem.Name = "jegyzettömbbenToolStripMenuItem";
             this.jegyzettömbbenToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.jegyzettömbbenToolStripMenuItem.Text = "Megjelenítés jegyzettömbben";
@@ -237,6 +239,7 @@
             // 
             // vágólapraMásolásToolStripMenuItem
             // 
+            this.vágólapraMásolásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.vágólapraMásolásToolStripMenuItem.Name = "vágólapraMásolásToolStripMenuItem";
             this.vágólapraMásolásToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.vágólapraMásolásToolStripMenuItem.Text = "Vágólapra másolás";
@@ -244,6 +247,7 @@
             // 
             // névjegyNyomtatásaToolStripMenuItem
             // 
+            this.névjegyNyomtatásaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.névjegyNyomtatásaToolStripMenuItem.Name = "névjegyNyomtatásaToolStripMenuItem";
             this.névjegyNyomtatásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.névjegyNyomtatásaToolStripMenuItem.Text = "Névjegy nyomtatása";
@@ -251,12 +255,14 @@
             // 
             // körÜzenetÍrásaToolStripMenuItem
             // 
+            this.körÜzenetÍrásaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.körÜzenetÍrásaToolStripMenuItem.Name = "körÜzenetÍrásaToolStripMenuItem";
             this.körÜzenetÍrásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.körÜzenetÍrásaToolStripMenuItem.Text = "Kör üzenet írása";
             // 
             // üzenetÍrásaToolStripMenuItem
             // 
+            this.üzenetÍrásaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.üzenetÍrásaToolStripMenuItem.Name = "üzenetÍrásaToolStripMenuItem";
             this.üzenetÍrásaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.üzenetÍrásaToolStripMenuItem.Text = "Üzenet írása";
@@ -268,12 +274,14 @@
             this.listaNézetMegjelenítéseToolStripMenuItem,
             this.faliújságMegjelenítéseToolStripMenuItem,
             this.összesElrejtéseToolStripMenuItem});
+            this.nézetToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nézetToolStripMenuItem.Name = "nézetToolStripMenuItem";
-            this.nézetToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.nézetToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.nézetToolStripMenuItem.Text = "Nézet";
             // 
             // listaNézetMegjelenítéseToolStripMenuItem
             // 
+            this.listaNézetMegjelenítéseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listaNézetMegjelenítéseToolStripMenuItem.Name = "listaNézetMegjelenítéseToolStripMenuItem";
             this.listaNézetMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.listaNézetMegjelenítéseToolStripMenuItem.Text = "Lista nézet megjelenítése";
@@ -281,6 +289,7 @@
             // 
             // faliújságMegjelenítéseToolStripMenuItem
             // 
+            this.faliújságMegjelenítéseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.faliújságMegjelenítéseToolStripMenuItem.Name = "faliújságMegjelenítéseToolStripMenuItem";
             this.faliújságMegjelenítéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.faliújságMegjelenítéseToolStripMenuItem.Text = "Faliújság megjelenítése";
@@ -288,6 +297,7 @@
             // 
             // összesElrejtéseToolStripMenuItem
             // 
+            this.összesElrejtéseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.összesElrejtéseToolStripMenuItem.Name = "összesElrejtéseToolStripMenuItem";
             this.összesElrejtéseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.összesElrejtéseToolStripMenuItem.Text = "Összes elrejtése";
@@ -295,15 +305,17 @@
             // 
             // támogatásToolStripMenuItem
             // 
+            this.támogatásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.támogatásToolStripMenuItem.Name = "támogatásToolStripMenuItem";
-            this.támogatásToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.támogatásToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.támogatásToolStripMenuItem.Text = "Támogatás";
             this.támogatásToolStripMenuItem.Click += new System.EventHandler(this.támogatásToolStripMenuItem_Click);
             // 
             // kijelentkezésToolStripMenuItem
             // 
+            this.kijelentkezésToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kijelentkezésToolStripMenuItem.Name = "kijelentkezésToolStripMenuItem";
-            this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.kijelentkezésToolStripMenuItem.Text = "Kijelentkezés";
             this.kijelentkezésToolStripMenuItem.Click += new System.EventHandler(this.kijelentkezésToolStripMenuItem_Click);
             // 
@@ -347,21 +359,14 @@
             this.comboBox1.Size = new System.Drawing.Size(110, 21);
             this.comboBox1.TabIndex = 18;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(86, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Keresés";
-            // 
             // aktivlogin
             // 
             this.aktivlogin.AutoSize = true;
-            this.aktivlogin.Location = new System.Drawing.Point(715, 9);
+            this.aktivlogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.aktivlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.aktivlogin.Location = new System.Drawing.Point(724, 4);
             this.aktivlogin.Name = "aktivlogin";
-            this.aktivlogin.Size = new System.Drawing.Size(42, 13);
+            this.aktivlogin.Size = new System.Drawing.Size(44, 15);
             this.aktivlogin.TabIndex = 20;
             this.aktivlogin.Text = "felhnev";
             // 
@@ -377,12 +382,18 @@
             // 
             // keresbutton
             // 
+            this.keresbutton.BackColor = System.Drawing.Color.White;
+            this.keresbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.keresbutton.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.keresbutton.FlatAppearance.BorderSize = 3;
+            this.keresbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.keresbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.keresbutton.Location = new System.Drawing.Point(653, 68);
             this.keresbutton.Name = "keresbutton";
             this.keresbutton.Size = new System.Drawing.Size(75, 23);
             this.keresbutton.TabIndex = 24;
             this.keresbutton.Text = "Keresés";
-            this.keresbutton.UseVisualStyleBackColor = true;
+            this.keresbutton.UseVisualStyleBackColor = false;
             this.keresbutton.Click += new System.EventHandler(this.keresbutton_Click);
             // 
             // richTextBox1
@@ -395,12 +406,17 @@
             // 
             // bejegyzes
             // 
+            this.bejegyzes.BackColor = System.Drawing.Color.White;
+            this.bejegyzes.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.bejegyzes.FlatAppearance.BorderSize = 3;
+            this.bejegyzes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bejegyzes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bejegyzes.Location = new System.Drawing.Point(500, 448);
             this.bejegyzes.Name = "bejegyzes";
             this.bejegyzes.Size = new System.Drawing.Size(109, 23);
             this.bejegyzes.TabIndex = 26;
             this.bejegyzes.Text = "Bejegyzés írása";
-            this.bejegyzes.UseVisualStyleBackColor = true;
+            this.bejegyzes.UseVisualStyleBackColor = false;
             this.bejegyzes.Click += new System.EventHandler(this.bejegyzes_Click);
             // 
             // bejegyzesbox
@@ -418,12 +434,18 @@
             // 
             // frissbutton
             // 
-            this.frissbutton.Location = new System.Drawing.Point(653, 448);
+            this.frissbutton.BackColor = System.Drawing.Color.White;
+            this.frissbutton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.frissbutton.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.frissbutton.FlatAppearance.BorderSize = 3;
+            this.frissbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.frissbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.frissbutton.Location = new System.Drawing.Point(633, 448);
             this.frissbutton.Name = "frissbutton";
-            this.frissbutton.Size = new System.Drawing.Size(75, 23);
+            this.frissbutton.Size = new System.Drawing.Size(95, 23);
             this.frissbutton.TabIndex = 28;
             this.frissbutton.Text = "Fal frissítése";
-            this.frissbutton.UseVisualStyleBackColor = true;
+            this.frissbutton.UseVisualStyleBackColor = false;
             this.frissbutton.Click += new System.EventHandler(this.frissbutton_Click);
             // 
             // listBox1
@@ -435,12 +457,32 @@
             this.listBox1.TabIndex = 29;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Dolgozok.Properties.Resources.Magnifying_glass_icon_svg;
+            this.pictureBox2.Location = new System.Drawing.Point(67, 64);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(301, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 188);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(799, 493);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.frissbutton);
             this.Controls.Add(this.bejegyzesbox);
@@ -449,7 +491,6 @@
             this.Controls.Add(this.keresbutton);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.aktivlogin);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
@@ -475,9 +516,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.Resize += new System.EventHandler(this.Form1_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,7 +553,6 @@
         private System.Windows.Forms.ToolStripMenuItem támogatásToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolStripMenuItem nézetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaNézetMegjelenítéseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faliújságMegjelenítéseToolStripMenuItem;
@@ -528,6 +569,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem összesElrejtéseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem üzenetÍrásaToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
