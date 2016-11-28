@@ -6,7 +6,8 @@ Környezeti feltétel:
  -Személyiségi jogyok védelme.
  
 Jelenlegi folyamat:
- A vállalat jelenleg alakul, így a meglévő dolgozói adatbázisok túlzottan drágák a számára, így megbízott minket hogy fejlesszünk számukra egy alap dolgozó nyilvántartó rendszert.
+ A vállalat jelenleg alakul, így a meglévő dolgozói adatbázisok túlzottan drágák a számára.
+ Így megbízott minket hogy fejlesszünk számukra egy alap dolgozó nyilvántartó rendszert.
  
 Megvalósítandó folyamatok:
  -Adatbázis megtervezése
@@ -20,7 +21,7 @@ Követelmények
  -felhasználó barát, grafikus felület
  -használható keresőmotor
  -gyors egyszerű keresés
- -külön hozzáférés vezetői, titkári, dolgozói szinten
+ -külön hozzáférés adminisztrátori, dolgozói szinten
  -rugalmas, homogén adatbázis
  -redundancia kizárása
  -hatékony működés
