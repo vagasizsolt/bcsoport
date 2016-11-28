@@ -10,7 +10,7 @@ Jelenlegi folyamat:
  Így megbízott minket hogy fejlesszünk számukra egy alap dolgozó nyilvántartó rendszert.
  
 Megvalósítandó folyamatok:
- -Adatbázis megtervezése
+ -Adatbázis megtervezése, --ide olyan folyamatok amit a rendszer csinál
  -felhanálói felület megtervezése
  -hozzáférési jogok kialakítása
  -egyéb igények felmérése
