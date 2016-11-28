@@ -1,12 +1,12 @@
 A program megírásához a C# nyelvet választottuk és egy széleskörben felhasználható dolgozói adatbázis rendszert szeretnénk létrehozni.
 A dolgoozói adatbázist Windows Form segítségével és SQLite adatbázis kezelő rendszerrel valósítjuk meg.
 
+
 Környezeti feltétel:
  -Személyiségi jogyok védelme.
  
-Jelnlegi folyamat:
- -tervezés
- -igény felmérés
+Jelenlegi folyamat:
+ A vállalat jelenleg alakul, így a meglévő dolgozói adatbázisok túlzottan drágák a számára, így megbízott minket hogy fejlesszünk számukra egy alap dolgozó nyilvántartó rendszert.
  
 Megvalósítandó folyamatok:
  -Adatbázis megtervezése
