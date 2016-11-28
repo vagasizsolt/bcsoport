@@ -1,6 +1,5 @@
-A program megírásához a C# nyelvet választottuk és egy széleskörben felhasználható telefonkönyv rendszert szeretnénk létrehozni.
-Célunk egy új, korszerű telefonknyv létrehozása, karbantartása és a felhasználói igények kielégítése. A fő célcsoportunk a közp- és nagy vállalatok.
-Két nagy csoportra oszthatóak az  adatbázisban szereplő adatok, egyrész a vállalat belső érintettjei, munkatársak és a vállalat külső környezete.
+A program megírásához a C# nyelvet választottuk és egy széleskörben felhasználható dolgozói adatbázis rendszert szeretnénk létrehozni.
+A dolgoozói adatbázist Windows Form segítségével és SQLite adatbázis kezelő rendszerrel valósítjuk meg.
 
 Környezeti feltétel:
  -Személyiségi jogyok védelme.
