@@ -36,7 +36,7 @@ Részletes:
 	-Hogyan?
 	------------
 		- Iskolai fejlesztőcsapat munka keretein belül
-		álltunk neki a programnak.
+		  álltunk neki a programnak.
 
 	-Mikor?
 	------------
@@ -69,4 +69,4 @@ Fizikai vetületek:
 		-Hozzájuk tartozó perifériák
 		-Aktív internet kapcsolat legalább 1mb/s 
 		-Adatbázis: az adatok tárolásának,
-		az SQLite segítségével
+		 az SQLite segítségével
