@@ -1,0 +1,45 @@
+Rendszerterv
+----------------------------------------
+
+Konceptuális:
+----------------------------------------
+
+	-Mit?
+	------------
+		- Egy cég számára csináltunk egy dolgozói nyilvántartó rendszert, amely tárolja a vállalat összes dolgozóját.
+		  Emellett pedig az email címeket, telefonszámokat, beosztásokat... stb.
+		   
+	
+	Miért?
+	------------	
+		- Egy vásárlók igényeit szeretnénk kielégíteni.
+
+Részletes:
+----------------------------------------
+	-Mit?
+	------------
+		- Egy vállalat számára egy olyan dolgozói nyilvántartó rendszert csináltunk, mely az alkalmazotti adatokat egy
+		  adatbáziban tárolja. Ez az adatbázis bõvíthetõ igény szerint. Ez a dolgozói nyilvántartó rendszer egy login
+		  felülettel fog kezdõdni, ahol az adott dolgozó a felhasználó nevével és jelszavával betud jelentkezni. Ha mégsem
+		  emlékezne a jelszavára, akkor az emailje megadásával megkaphatja azt. Amint egy dolgozó belépett a rendszerbe
+		  tud a már meglévõ adatok között keresni beosztás, név, telefonszám stb. alapján. Ezt megteheti pontos illetve 
+		  nem pontos keresésként is. Ezen kívül tud megjegyzéseket írni, a többi dolgozónak. A szükséges adatokat 
+		  pedig pdf fájl formátumban ki is tudja menteni. A programunkat C#-ban írtuk meg.
+
+	-Miért?
+	------------
+		- A vásárlók igényeit szeretnénk kielégíteni, ugyanis minden vállalatnak szüksége van dolgozói nyilvántartásra.
+	 	  A cégek minden dolgozójukról szeretnének minden információt tárolni, valamint azokat a késõbbiekben 
+		  visszakeresni. A sikeres projekt elvégzése után a programunkat újabb funkciókkal tudjuk bõvíteni ezáltal
+		  pedig más vállalatok is megkereshetnek minket újabb munkák elvégzése miatt.
+
+	-Hogyan?
+	------------
+		- Iskolai fejlesztõcsapat munka keretein belül
+		álltunk neki a programnak.
+
+	-Mikor?
+	------------
+		- A 2016/2017-es tanév elsõ félévében.
+
+
