@@ -1,45 +1,72 @@
 Rendszerterv
 ----------------------------------------
 
-Konceptuális:
+KonceptuÃ¡lis:
 ----------------------------------------
 
 	-Mit?
 	------------
-		- Egy cég számára csináltunk egy dolgozói nyilvántartó rendszert, amely tárolja a vállalat összes dolgozóját.
-		  Emellett pedig az email címeket, telefonszámokat, beosztásokat... stb.
+		- Egy cÃ©g szÃ¡mÃ¡ra csinÃ¡ltunk egy dolgozÃ³i nyilvÃ¡ntartÃ³ rendszert, amely tÃ¡rolja a vÃ¡llalat Ã¶sszes dolgozÃ³jÃ¡t.
+		  Emellett pedig az email cÃ­meket, telefonszÃ¡mokat, beosztÃ¡sokat... stb.
 		   
 	
-	Miért?
+	MiÃ©rt?
 	------------	
-		- Egy vásárlók igényeit szeretnénk kielégíteni.
+		- Egy vÃ¡sÃ¡rlÃ³k igÃ©nyeit szeretnÃ©nk kielÃ©gÃ­teni.
 
-Részletes:
+RÃ©szletes:
 ----------------------------------------
 	-Mit?
 	------------
-		- Egy vállalat számára egy olyan dolgozói nyilvántartó rendszert csináltunk, mely az alkalmazotti adatokat egy
-		  adatbáziban tárolja. Ez az adatbázis bõvíthetõ igény szerint. Ez a dolgozói nyilvántartó rendszer egy login
-		  felülettel fog kezdõdni, ahol az adott dolgozó a felhasználó nevével és jelszavával betud jelentkezni. Ha mégsem
-		  emlékezne a jelszavára, akkor az emailje megadásával megkaphatja azt. Amint egy dolgozó belépett a rendszerbe
-		  tud a már meglévõ adatok között keresni beosztás, név, telefonszám stb. alapján. Ezt megteheti pontos illetve 
-		  nem pontos keresésként is. Ezen kívül tud megjegyzéseket írni, a többi dolgozónak. A szükséges adatokat 
-		  pedig pdf fájl formátumban ki is tudja menteni. A programunkat C#-ban írtuk meg.
+		- Egy vÃ¡llalat szÃ¡mÃ¡ra egy olyan dolgozÃ³i nyilvÃ¡ntartÃ³ rendszert csinÃ¡ltunk, mely az alkalmazotti adatokat egy
+		  adatbÃ¡ziban tÃ¡rolja. Ez az adatbÃ¡zis bÅ‘vÃ­thetÅ‘ igÃ©ny szerint. Ez a dolgozÃ³i nyilvÃ¡ntartÃ³ rendszer egy login
+		  felÃ¼lettel fog kezdÅ‘dni, ahol az adott dolgozÃ³ a felhasznÃ¡lÃ³ nevÃ©vel Ã©s jelszavÃ¡val betud jelentkezni. Ha mÃ©gsem
+		  emlÃ©kezne a jelszavÃ¡ra, akkor az emailje megadÃ¡sÃ¡val megkaphatja azt. Amint egy dolgozÃ³ belÃ©pett a rendszerbe
+		  tud a mÃ¡r meglÃ©vÅ‘ adatok kÃ¶zÃ¶tt keresni beosztÃ¡s, nÃ©v, telefonszÃ¡m stb. alapjÃ¡n. Ezt megteheti pontos illetve 
+		  nem pontos keresÃ©skÃ©nt is. Ezen kÃ­vÃ¼l tud megjegyzÃ©seket Ã­rni, a tÃ¶bbi dolgozÃ³nak. A szÃ¼ksÃ©ges adatokat 
+		  pedig pdf fÃ¡jl formÃ¡tumban ki is tudja menteni. A programunkat C#-ban Ã­rtuk meg.
 
-	-Miért?
+	-MiÃ©rt?
 	------------
-		- A vásárlók igényeit szeretnénk kielégíteni, ugyanis minden vállalatnak szüksége van dolgozói nyilvántartásra.
-	 	  A cégek minden dolgozójukról szeretnének minden információt tárolni, valamint azokat a késõbbiekben 
-		  visszakeresni. A sikeres projekt elvégzése után a programunkat újabb funkciókkal tudjuk bõvíteni ezáltal
-		  pedig más vállalatok is megkereshetnek minket újabb munkák elvégzése miatt.
+		- A vÃ¡sÃ¡rlÃ³k igÃ©nyeit szeretnÃ©nk kielÃ©gÃ­teni, ugyanis minden vÃ¡llalatnak szÃ¼ksÃ©ge van dolgozÃ³i nyilvÃ¡ntartÃ¡sra.
+	 	  A cÃ©gek minden dolgozÃ³jukrÃ³l szeretnÃ©nek minden informÃ¡ciÃ³t tÃ¡rolni, valamint azokat a kÃ©sÅ‘bbiekben 
+		  visszakeresni. A sikeres projekt elvÃ©gzÃ©se utÃ¡n a programunkat Ãºjabb funkciÃ³kkal tudjuk bÅ‘vÃ­teni ezÃ¡ltal
+		  pedig mÃ¡s vÃ¡llalatok is megkereshetnek minket Ãºjabb munkÃ¡k elvÃ©gzÃ©se miatt.
 
 	-Hogyan?
 	------------
-		- Iskolai fejlesztõcsapat munka keretein belül
-		álltunk neki a programnak.
+		- Iskolai fejlesztÅ‘csapat munka keretein belÃ¼l
+		Ã¡lltunk neki a programnak.
 
 	-Mikor?
 	------------
-		- A 2016/2017-es tanév elsõ félévében.
+		- A 2016/2017-es tanÃ©v elsÅ‘ fÃ©lÃ©vÃ©ben.
 
 
+Fizikai vetÃ¼letek:
+------------------------------------
+
+	VÃ¡sÃ¡rolt softwarekomponensek:
+	---------------------------------
+		-HasznÃ¡lt, vÃ¡sÃ¡rolt softwarekomponensek
+			
+			
+		--VisualStudio 2012:  programozÃ¡si nyelv, kÃ¶rnyezet, ingyenes tanulÃ³i fiÃ³k
+						
+		--GitHub: interneten publikÃ¡lÃ¡shoz Ã©s a csapatmunka rÃ©sze
+
+		--MS office: a specifikÃ¡ciÃ³k, rendszerkÃ¶vetelmÃ©nyek Ã©s egyÃ©b dokumentÃ¡ciÃ³k elkÃ©szÃ­tÃ©se, ingyenes tanulÃ³i fiÃ³k
+			
+		--Windows operÃ¡ciÃ³s rendszer: ingyenes iskolai verziÃ³
+			
+		--SQLite: ingyenes adatbÃ¡zis kezelÅ‘ rendszer
+
+
+	Hardware Ã©s hÃ¡lÃ³zati topolÃ³gia:
+	------------------------------------------------
+		
+		-HÃ¡rom szÃ¡mÃ­tÃ³gÃ©p
+		-HozzÃ¡juk tartozÃ³ perifÃ©riÃ¡k
+		-AktÃ­v internet kapcsolat legalÃ¡bb 1mb/s 
+		-AdatbÃ¡zis: az adatok tÃ¡rolÃ¡sÃ¡nak,
+		az SQLite segÃ­tsÃ©gÃ©vel
