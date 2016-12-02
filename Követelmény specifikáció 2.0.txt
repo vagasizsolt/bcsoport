@@ -64,11 +64,54 @@ Követelménylista:
 ------------------------------------
 
 
-Modul			ID		Név	V.	Kifejtés
+Modul				ID			Név			V.		Kifejtés
+--------------------------------------------------------------------------------------------------------------------------------------
 				
-Beléptető rendszer				
-				
-				
+Beléptető rendszer		D1			Beléptetés		0.1		A felhasználó a jelszavának megadásával 
+												beléphet a rendszerbe. Helytelen jelszó
+												vagy felhasználó név esetén hibát kap. A
+												felhasználó az enter leütésével is
+												beléphet ha helyes a megadott
+												felhasználói név illetve a jelszó.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adatok				D2			Adatbázis kezelése	0.2		A megbízott cég adatait betültöttük az
+												adatbázisba és így már minden
+												alkalmazott fel van véve a
+												rendszerünkbe.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adatok kezelése			D3			Adatok léptetése	0.3		Az adatbázis adataiból már léptetni
+												tudunk a következő aktuális rekordra.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adatok keresése			D4			Adatok között keresés	0.4		Adatbázisból tudunk pontos, illetve nem
+												pontos keresést végezni. Egy lenyíló
+												ablakból pedig kitudja a felhasználó 
+												választani, hogy mire akar rákeresni.
+												Pl.: Név, besztás, id
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adatok kezelése			D5			Email emlékeztető	0.5		A felhasználó esetleges jelszó
+												elfelejtés esetén megkaphatja a
+												jelszavát, ha megadja az email címet.
+												Ezután levélben megkapja, hogy mi is
+												volt a belépő jelszava.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adatok frissítése		D6			Megjegyzések írása	0.6		Az éppen bejelentkezett felhasználó tud
+												a többi alkalmazottnk megjegyzéseket
+												írni. Ezeket lehet frissíteni.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adatok mentése			D7			Adatok nyomtatása	0.7		Az éppen aktuális adatokat ki lehet
+												nyomtatni pdf fájl formátumban.
+							
+							
 
 Irányított és szabad szöveges riportok szövege:
 ------------------------------------------------------------------------
