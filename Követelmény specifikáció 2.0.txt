@@ -2,11 +2,13 @@
 Jelenlegi helyzet leírása:
 ------------------------------------
 
-A megrendelést követően a csapatunk átbeszélte, hogy melyik feladat részt ki fogja csinálni, hogy a megrendelő által kitűzött végső időpontra elkészüljön a projektünk.
-A programunk megírását folyamatosan bővítjük a megrendelő által kért funkciókkal. Eddig megcsináltuk a beléptető rendszert és a keresési funkció is tökéletesen működik. Jelenleg
-az adatbázisunkat bővítjük a vevő által megadott adatokkal és ellenőrizzük, hogy azt helyesen dolgozza föl a kereső motor.Ezen kívül az email küldés funkciót is elkészült, mely 
-segítségével több másik funkciót is elkezdtünk kidolgozni. A projektünk már majdnem elkészült, az utolsó simítások vannak hátra, valamint ellenőrizzük, hogy minden funkciót,
-melyet a megrendelő kért helyesen létrehoztuk-e. Valamint az adatbázis-kapcsolati táblákat kell még kiegészíteni, ellenőrizni helyes működését.
+A megrendelést követően a csapatunk átbeszélte, hogy melyik feladat részt ki fogja csinálni, hogy a megrendelő által kitűzött végső
+időpontra elkészüljön a projektünk.
+A programunk megírását folyamatosan bővítjük a megrendelő által kért funkciókkal. Eddig megcsináltuk a beléptető rendszert és a keresési
+funkció is tökéletesen működik. Jelenleg az adatbázisunkat bővítjük a vevő által megadott adatokkal és ellenőrizzük, hogy azt helyesen
+dolgozza föl a kereső motor.Ezen kívül az email küldés funkciót is elkészült, mely 
+segítségével több másik funkciót is elkezdtünk kidolgozni. A projektünk már majdnem elkészült, az utolsó simítások vannak hátra,
+valamint ellenőrizzük, hogy minden funkciót, melyet a megrendelő kért helyesen létrehoztuk-e. Valamint az adatbázis-kapcsolati táblákat kell még kiegészíteni, ellenőrizni helyes működését.
 
 
 Vágyálom rendszer leírása:
