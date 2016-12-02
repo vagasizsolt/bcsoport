@@ -14,10 +14,14 @@ megrendelő kért helyesen létrehoztuk-e. Valamint az adatbázis-kapcsolati tá
 Vágyálom rendszer leírása:
 ------------------------------------
 
-Ugyan a megrendelő nem volt benne biztos, hogy szeretné-e, hogy különböző hierarchiai rendszereket írjunk a projektbe, megpróbálkozunk ennek megírásával.
-Különböző jogosultsági rendszerek lennének kialakítva, ahol alkalmazottaktól függően tudná valaki szerkeszteni, felülírni az adatokat, emellett valaki csak látja a keresett információt,
-de szerkeszteni nem tudja. A felületre az „admin” felhasználónk lenne egy adat felvivő rendszert gyorsító funkciót ellátó gomb, mellyel egyszerűen fel tudja venni az alkalmazottakat,
-ezen kívül csak egy kattintással ki is tudná azt törölni. Ennek az lenne a célja, hogy nem az adatbázisban kellene különböző utasításokat írnia.
+Ugyan a megrendelő nem volt benne biztos, hogy szeretné-e, hogy különböző hierarchiai rendszereket írjunk a projektbe, megpróbálkozunk
+ennek megírásával.
+Különböző jogosultsági rendszerek lennének kialakítva, ahol alkalmazottaktól függően tudná valaki szerkeszteni, felülírni az adatokat,
+emellett valaki csak látja a keresett információt,
+de szerkeszteni nem tudja. A felületre az „admin” felhasználónk lenne egy adat felvivő rendszert gyorsító funkciót ellátó gomb, mellyel
+egyszerűen fel tudja venni az alkalmazottakat,
+ezen kívül csak egy kattintással ki is tudná azt törölni. Ennek az lenne a célja, hogy nem az adatbázisban kellene különböző
+utasításokat írnia.
 
 
 A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása:
@@ -27,7 +31,9 @@ A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és aj�
 - Csak az adott jogosultságnak megfelelően tudja az alkalmazott látni a keresett információt
 - A cégünk tagjai nem élhetnek vissza a feldolgozásra kapott adatokkal, információkkal
 - Senkinek sem adhatunk ki bármilyen a megrendelő által alkalmazott dolgozókról adatot
-- A projekt befejeztével a munkaadó személyesen ellenőrizheti, hogy minden általa kért funkciót teljesítettünk-e, ha pedig valamilyen hibát észlel, azt kötelességünk kijavítanunk, melyért semmilyen egyéb juttatást nem kapunk
+- A projekt befejeztével a munkaadó személyesen ellenőrizheti, hogy minden általa kért
+funkciót teljesítettünk-e, ha pedig valamilyen hibát észlel, azt kötelességünk kijavítanunk, melyért semmilyen egyéb juttatást nem
+kapunk
 - A projekt elégedettségétől függően további munkát kérhet tőlünk a megrendelő
 
 
