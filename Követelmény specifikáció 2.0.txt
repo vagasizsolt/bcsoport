@@ -1,0 +1,96 @@
+﻿
+Jelenlegi helyzet leírása:
+------------------------------------
+
+A megrendelést követően a csapatunk átbeszélte, hogy melyik feladat részt ki fogja csinálni, hogy a megrendelő által kitűzött végső időpontra elkészüljön a projektünk.
+A programunk megírását folyamatosan bővítjük a megrendelő által kért funkciókkal. Eddig megcsináltuk a beléptető rendszert és a keresési funkció is tökéletesen működik. Jelenleg
+az adatbázisunkat bővítjük a vevő által megadott adatokkal és ellenőrizzük, hogy azt helyesen dolgozza föl a kereső motor.Ezen kívül az email küldés funkciót is elkészült, mely 
+segítségével több másik funkciót is elkezdtünk kidolgozni. A projektünk már majdnem elkészült, az utolsó simítások vannak hátra, valamint ellenőrizzük, hogy minden funkciót,
+melyet a megrendelő kért helyesen létrehoztuk-e. Valamint az adatbázis-kapcsolati táblákat kell még kiegészíteni, ellenőrizni helyes működését.
+
+
+Vágyálom rendszer leírása:
+------------------------------------
+
+Ugyan a megrendelő nem volt benne biztos, hogy szeretné-e, hogy különböző hierarchiai rendszereket írjunk a projektbe, megpróbálkozunk ennek megírásával.
+Különböző jogosultsági rendszerek lennének kialakítva, ahol alkalmazottaktól függően tudná valaki szerkeszteni, felülírni az adatokat, emellett valaki csak látja a keresett információt,
+de szerkeszteni nem tudja. A felületre az „admin” felhasználónk lenne egy adat felvivő rendszert gyorsító funkciót ellátó gomb, mellyel egyszerűen fel tudja venni az alkalmazottakat,
+ezen kívül csak egy kattintással ki is tudná azt törölni. Ennek az lenne a célja, hogy nem az adatbázisban kellene különböző utasításokat írnia.
+
+
+A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása:
+--------------------------------------------------------------------------------------------------------------------------------
+
+- Személyiségi jogok védelme
+- Csak az adott jogosultságnak megfelelően tudja az alkalmazott látni a keresett információt
+- A cégünk tagjai nem élhetnek vissza a feldolgozásra kapott adatokkal, információkkal
+- Senkinek sem adhatunk ki bármilyen a megrendelő által alkalmazott dolgozókról adatot
+- A projekt befejeztével a munkaadó személyesen ellenőrizheti, hogy minden általa kért funkciót teljesítettünk-e, ha pedig valamilyen hibát észlel, azt kötelességünk kijavítanunk, melyért semmilyen egyéb juttatást nem kapunk
+- A projekt elégedettségétől függően további munkát kérhet tőlünk a megrendelő
+
+
+Jelenlegi üzleti folyamatok modellje:
+-------------------------------------------------------
+
+-->Azonosítani a célokat --> A feladat vázlatát elkészíteni --> Grafikus felületet megtervezni -->
+A feladat vázlatát valamint a grafikus felületet felülvizsgálni --> Az adatokat összegyűjteni -->
+Azokat felvenni egy adatbázisban --> A beléptető rendszert megírni --> Keresőmotor megvalósítása -->
+Keresőmotor tesztelése --> Egyéb funkciók teljesítése --> Hibák kezelése, és javítása -->
+A felületen megjelenő gombok megfelelő elrendezése --> Adatbázis ellenőrzése
+
+
+Igényelt üzleti folyamatok modellje:
+------------------------------------------------------
+
+Azonosítani a célokat --> A feladat vázlatát elkészíteni --> Grafikus felületet megtervezni -->
+A feladat vázlatát valamint a grafikus felületet felülvizsgálni --> Az adatokat összegyűjteni --> 
+Azokat felvenni egy adatbázisban --> A beléptető rendszert megírni --> Keresőmotor megvalósítása --> 
+Keresőmotor tesztelése --> Egyéb funkciók teljesítése --> Hibák kezelése, és javítása -->
+A felületen megjelenő gombok megfelelő elrendezése --> Design kialakítása a megrendelő igényei alapján --> 
+Meglévő funkciók tesztelése --> Adatbázis ellenőrzése -->
+Megvizsgálni az összes általunk írt funkciót, hogy azok a megrendelő igénye szerint működnek és megfelelő adatot szolgáltatnak-e
+
+
+
+Követelménylista:
+------------------------------------
+
+
+Modul			ID		Név	V.	Kifejtés
+				
+Beléptető rendszer				
+				
+				
+
+Irányított és szabad szöveges riportok szövege:
+------------------------------------------------------------------------
+
+
+ 1) Mik a rendszer fontos tulajdonágai?
+
+ 2) Kérem, mondja el forgatókönyv szerűen, hogyan szeretné használni a rendszer a belépéstől a kilépésig!
+
+ 3) Milyen kivételes helyzetekre kell felkészülni?
+
+ 4) Mennyi adattal kell dolgoznunk?
+
+ 5) Milyen funkciókat lásson el a program?
+
+ 6) Az adatbázis fix vagy bővíthető legyen?
+
+ 7) Milyen legyen a felület kinézete?
+
+ 8) Hány gomb legyen a login ablakon?
+
+ 9) Kellenek-e különböző értesítések, hiba esetén?
+
+ 10) Van-e megfelelő ember újabb adatok fölvitelére?
+
+ 11) Van-e megfelelő ember a már meglévő adatok módsítására, törlésére?
+
+ 12) Milyen egyéb funkciók kellenek a megfelelő működéshez?
+ 
+ 13) Bővíthető legyen-e a projekt újabb funkciókkal a későbbiekben?
+
+ 14) Kellenek-e különböző jogosultsági rendszerek?
+
