@@ -45,7 +45,11 @@ namespace Dolgozok
             {
                 ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                 nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                while (reszleg.Read())
+                {
+                    reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));   
+                }
                 beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                 email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                 telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
@@ -78,7 +82,11 @@ namespace Dolgozok
                 {
                     ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                     nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                    reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                    SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                    while (reszleg.Read())
+                    {
+                        reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                    }
                     beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                     email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                     telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
@@ -109,7 +117,11 @@ namespace Dolgozok
                 {
                     ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                     nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                    reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                    SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                    while (reszleg.Read())
+                    {
+                        reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                    }
                     beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                     email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                     telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
@@ -337,7 +349,11 @@ namespace Dolgozok
                         {
                             ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                             nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                            reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                            SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                            while (reszleg.Read())
+                            {
+                                reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                            }
                             beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                             email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                             telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
@@ -491,7 +507,11 @@ namespace Dolgozok
                 {
                     ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                     nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                    reszleg_textbox.Text = (String.Format("{0}", reader.GetValue(2)));
+                    SQLiteDataReader reszleg = db.Lekerdezes("select * from Reszlegek where ID=" + reader.GetValue(2));
+                    while (reszleg.Read())
+                    {
+                        reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(1)));
+                    }
                     beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
                     email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                     telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
