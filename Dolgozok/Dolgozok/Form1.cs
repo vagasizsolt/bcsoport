@@ -43,23 +43,23 @@ namespace Dolgozok
 
             while (reader.Read())
             {
-                ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                 SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
                 while (reszleg.Read())
                 {
-                    reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));   
+                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                    reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+
+                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                    System.Drawing.Image kepX = new Bitmap(eleres);
+                    pictureBox1.Image = kepX;
+
+                    cimzett = email_textbox.Text;
+                    cimzettnev = nev_textbox.Text;
                 }
-                beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-
-                string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                System.Drawing.Image kepX = new Bitmap(eleres);
-                pictureBox1.Image = kepX;
-
-                cimzett = email_textbox.Text;
-                cimzettnev = nev_textbox.Text;
             }
 
 
@@ -70,7 +70,6 @@ namespace Dolgozok
 
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             int j = i + 1;
@@ -80,32 +79,30 @@ namespace Dolgozok
                 i++;
                 while (reader.Read())
                 {
-                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                    
                     SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
                     while (reszleg.Read())
                     {
+                        ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                        nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                         reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                        telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                        string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                        System.Drawing.Image kepX = new Bitmap(eleres);
+                        pictureBox1.Image = kepX;
+
+                        cimzett = email_textbox.Text;
+                        cimzettnev = nev_textbox.Text;
+
+                        richTextBox1.Text = "";
                     }
-                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                    System.Drawing.Image kepX = new Bitmap(eleres);
-                    pictureBox1.Image = kepX;
-
-                    cimzett = email_textbox.Text;
-                    cimzettnev = nev_textbox.Text;
-
-                    richTextBox1.Text = "";
-
                 }
             }
 
         }
             
-        
-
         private void button2_Click(object sender, EventArgs e)
         {
             int j = i - 1;
@@ -115,28 +112,27 @@ namespace Dolgozok
                 i--;
                 while (reader.Read())
                 {
-                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                     SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
                     while (reszleg.Read())
                     {
+                        ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                        nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                         reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                        telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                        string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                        System.Drawing.Image kepX = new Bitmap(eleres);
+                        pictureBox1.Image = kepX;
+
+                        cimzett = email_textbox.Text;
+                        cimzettnev = nev_textbox.Text;
+
+                        richTextBox1.Text = "";
                     }
-                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                    System.Drawing.Image kepX = new Bitmap(eleres);
-                    pictureBox1.Image = kepX;
-
-                    cimzett = email_textbox.Text;
-                    cimzettnev = nev_textbox.Text;
-
-                    richTextBox1.Text = "";
                 }
             }
         }
-
 
         public void jegyzettömbbenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -228,7 +224,6 @@ namespace Dolgozok
             }
             System.Windows.Forms.MessageBox.Show("A nyomtatás nézetből az Esc-el léphet ki!");
         }
-
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -436,7 +431,6 @@ namespace Dolgozok
             this.Size = new System.Drawing.Size(815, 525);
         }
 
-
         private void bejegyzes_Click(object sender, EventArgs e)
         {
             SQLiteDataReader writer = db.Lekerdezes("insert into Faliujsag (Szoveg,Modositotta,D_ID) values ('" 
@@ -505,21 +499,21 @@ namespace Dolgozok
             {
                 while (reader.Read())
                 {
-                    ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                    nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                     SQLiteDataReader reszleg = db.Lekerdezes("select * from Reszlegek where ID=" + reader.GetValue(2));
                     while (reszleg.Read())
                     {
+                        ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                        nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                         reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(1)));
-                    }
-                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                    email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                    telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-                    string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                    System.Drawing.Image kepX = new Bitmap(eleres);
-                    pictureBox1.Image = kepX;
+                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                        telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                        string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                        System.Drawing.Image kepX = new Bitmap(eleres);
+                        pictureBox1.Image = kepX;
 
-                    richTextBox1.Text = "";
+                        richTextBox1.Text = "";
+                    }
                 }
             }
         }
@@ -533,14 +527,12 @@ namespace Dolgozok
             frissbutton.Visible = false;
         }
 
-        
         private void üzenetÍrásaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             uzenet uzenet = new uzenet();
             uzenet.Show();
         }
-
 
 
     }
