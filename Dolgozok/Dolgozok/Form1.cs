@@ -339,64 +339,243 @@ namespace Dolgozok
             {
                 if (checkBox1.CheckState == CheckState.Checked)
                 {
-                    SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
-                    if (reader.HasRows == true)
+                    if (mialapjan == "Reszleg")
                     {
-                        while (reader.Read())
+                        SQLiteDataReader seged = db.Lekerdezes("select * from Reszlegek where Reszleg ='" + mit + "'");
+                        if (seged.HasRows == true)
                         {
-                            ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
-                            nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                            SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
-                            while (reszleg.Read())
+                            while (seged.Read())
                             {
-                                reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                                SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + seged.GetValue(0) + "'");
+                                if (reader.HasRows == true)
+                                {
+                                    while (reader.Read())
+                                    {
+                                        SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                                        SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                                        while (reszleg.Read() && beosztas.Read())
+                                        {
+                                            ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                                            nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                                            reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                                            beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
+                                            email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                                            telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                                            string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                                            System.Drawing.Image kepX = new Bitmap(eleres);
+                                            pictureBox1.Image = kepX;
+
+                                            listBox1.Visible = true;
+
+                                            elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                                                            + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                                        }
+      
+                                    }
+                                    for (int i = 0; i < elemek.Count(); i++)
+                                    {
+                                        listBox1.Items.Add(elemek[i]);
+                                        listanezetklikk = true;
+                                    }
+                                }
                             }
-                            beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
-                            email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
-                            telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
-                            string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
-                            System.Drawing.Image kepX = new Bitmap(eleres);
-                            pictureBox1.Image = kepX;
-
-                            listBox1.Visible = true;
-
-                            elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
-                                            + " " + reader.GetValue(3).ToString() + System.Environment.NewLine + " ");
                         }
-                        for (int i = 0; i < elemek.Count(); i++)
+                        if (elemek.Count() == 0)
                         {
-                            listBox1.Items.Add(elemek[i]);
-                            listanezetklikk = true;
+                            MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
                         }
                     }
-                    if (elemek.Count() == 0)
+                    else
                     {
-                        MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                        if (mialapjan == "Beosztas")
+                        {
+                            SQLiteDataReader seged = db.Lekerdezes("select * from Beosztasok where Beosztas ='" + mit + "'");
+                            if (seged.HasRows == true)
+                            {
+                                while (seged.Read())
+                                {
+                                    SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + seged.GetValue(0) + "'");
+                                    if (reader.HasRows == true)
+                                    {
+                                        while (reader.Read())
+                                        {
+                                            SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                                            SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                                            while (reszleg.Read() && beosztas.Read())
+                                            {
+                                                ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                                                nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                                                reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                                                beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
+                                                email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                                                telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                                                string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                                                System.Drawing.Image kepX = new Bitmap(eleres);
+                                                pictureBox1.Image = kepX;
+
+                                                listBox1.Visible = true;
+
+                                                elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                                                            + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                                            }
+                                        }
+                                        for (int i = 0; i < elemek.Count(); i++)
+                                        {
+                                            listBox1.Items.Add(elemek[i]);
+                                            listanezetklikk = true;
+                                        }
+                                    }
+                                }
+                            }
+                            if (elemek.Count() == 0)
+                            {
+                                MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                            }
+                        }
+                        else
+                        {
+                            SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " ='" + mit + "'");
+                            if (reader.HasRows == true)
+                            {
+                                while (reader.Read())
+                                {
+                                    SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                                    SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                                    while (reszleg.Read() && beosztas.Read())
+                                    {
+                                        ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
+                                        nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
+                                        reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                                        beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
+                                        email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
+                                        telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
+                                        string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
+                                        System.Drawing.Image kepX = new Bitmap(eleres);
+                                        pictureBox1.Image = kepX;
+
+                                        listBox1.Visible = true;
+
+                                        elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                                                    + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                                    }
+                                }
+                                for (int i = 0; i < elemek.Count(); i++)
+                                {
+                                    listBox1.Items.Add(elemek[i]);
+                                    listanezetklikk = true;
+                                }
+                            }
+                            if (elemek.Count() == 0)
+                            {
+                                MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                            }
+                        }
                     }
                 }
                 else
                 {
                     if (checkBox1.CheckState == CheckState.Unchecked)
                     {
-                        SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " LIKE'%" + mit + "%'");
-                        if (reader.HasRows == true)
+                        if (mialapjan == "Beosztas")
                         {
-                            while (reader.Read())
+                            SQLiteDataReader seged = db.Lekerdezes("select * from Beosztasok where Beosztas LIKE'%" + mit + "%'");
+                            if (seged.HasRows == true)
                             {
-                                listBox1.Visible = true;
+                                while (seged.Read())
+                                {
+                                    SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where Beosztas=" + seged.GetValue(0));
+                                    if (reader.HasRows == true)
+                                    {
+                                        while (reader.Read())
+                                        {
+                                            SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                                            SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                                            while (beosztas.Read() && reszleg.Read())
+                                            {
+                                                listBox1.Visible = true;
 
-                                elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
-                                                + " " + reader.GetValue(3).ToString() + System.Environment.NewLine + " ");
+                                                elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                                                        + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                                            }
+                                            for (int i = 0; i < elemek.Count(); i++)
+                                            {
+                                                listBox1.Items.Add(elemek[i]);
+                                                listanezetklikk = true;
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            for (int i = 0; i < elemek.Count(); i++)
+                            if (elemek.Count() == 0)
                             {
-                                listBox1.Items.Add(elemek[i]);
-                                listanezetklikk = true;
+                                MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
                             }
                         }
-                        if (elemek.Count() == 0)
+                        else
                         {
-                            MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                            if (mialapjan == "Reszleg")
+                            {
+                                SQLiteDataReader seged = db.Lekerdezes("select * from Reszlegek where Reszleg LIKE'%" + mit + "%'");
+                                if (seged.HasRows == true)
+                                {
+                                    while (seged.Read())
+                                    {
+                                        SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where Reszleg=" + seged.GetValue(0));
+                                        if (reader.HasRows == true)
+                                        {
+                                            while (reader.Read())
+                                            {
+                                                SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                                                SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                                                while (beosztas.Read() && reszleg.Read())
+                                                {
+                                                    listBox1.Visible = true;
+
+                                                    elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                                                            + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                                                }
+                                                for (int i = 0; i < elemek.Count(); i++)
+                                                {
+                                                    listBox1.Items.Add(elemek[i]);
+                                                    listanezetklikk = true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                if (elemek.Count() == 0)
+                                {
+                                    MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                                }
+                            }
+                            else
+                            {
+                                SQLiteDataReader reader = db.Lekerdezes("select * from Dolgozok where " + mialapjan + " LIKE'%" + mit + "%'");
+                                if (reader.HasRows == true)
+                                {
+                                    while (reader.Read())
+                                    {
+                                        SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                                        SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                                        while (beosztas.Read() && reszleg.Read())
+                                        {
+                                            listBox1.Visible = true;
+
+                                            elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                                                            + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                                        }
+                                    }
+                                    for (int i = 0; i < elemek.Count(); i++)
+                                    {
+                                        listBox1.Items.Add(elemek[i]);
+                                        listanezetklikk = true;
+                                    }
+                                }
+                                if (elemek.Count() == 0)
+                                {
+                                    MessageBox.Show("Nincs a keresésnek megfelelő elem az adatbázisban!");
+                                }
+                            }
                         }
                     }
                 }                               
