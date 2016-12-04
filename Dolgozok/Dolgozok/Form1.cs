@@ -43,13 +43,14 @@ namespace Dolgozok
 
             while (reader.Read())
             {
+                SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
                 SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
-                while (reszleg.Read())
+                while (reszleg.Read() && beosztas.Read())
                 {
                     ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                     nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                     reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
-                    beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                    beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
                     email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                     telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
 
@@ -79,14 +80,14 @@ namespace Dolgozok
                 i++;
                 while (reader.Read())
                 {
-                    
+                    SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
                     SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
-                    while (reszleg.Read())
+                    while (reszleg.Read() && beosztas.Read())
                     {
                         ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                         nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                         reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
-                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
                         email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                         telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
                         string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
@@ -112,13 +113,14 @@ namespace Dolgozok
                 i--;
                 while (reader.Read())
                 {
+                    SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
                     SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
-                    while (reszleg.Read())
+                    while (reszleg.Read() && beosztas.Read())
                     {
                         ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                         nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
                         reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
-                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
                         email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                         telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
                         string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
@@ -478,8 +480,13 @@ namespace Dolgozok
                     i++;
                     while (reader.Read())
                     {
-                        elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reader.GetValue(2).ToString()
-                            + " " + reader.GetValue(3).ToString() +  System.Environment.NewLine + " ");
+                        SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                        SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                        while (beosztas.Read() && reszleg.Read())
+                        {
+                            elemek.Add(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + " " + reszleg.GetValue(0).ToString()
+                            + " " + beosztas.GetValue(0).ToString() + System.Environment.NewLine + " ");
+                        }
                     }
                 }
 
@@ -499,13 +506,14 @@ namespace Dolgozok
             {
                 while (reader.Read())
                 {
-                    SQLiteDataReader reszleg = db.Lekerdezes("select * from Reszlegek where ID=" + reader.GetValue(2));
-                    while (reszleg.Read())
+                    SQLiteDataReader beosztas = db.Lekerdezes("select Beosztas from Beosztasok where ID=" + reader.GetValue(3));
+                    SQLiteDataReader reszleg = db.Lekerdezes("select Reszleg from Reszlegek where ID=" + reader.GetValue(2));
+                    while (reszleg.Read() && beosztas.Read())
                     {
                         ID_textbox.Text = (String.Format("{0}", reader.GetValue(0)));
                         nev_textbox.Text = (String.Format("{0}", reader.GetValue(1)));
-                        reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(1)));
-                        beosztas_textbox.Text = (String.Format("{0}", reader.GetValue(3)));
+                        reszleg_textbox.Text = (String.Format("{0}", reszleg.GetValue(0)));
+                        beosztas_textbox.Text = (String.Format("{0}", beosztas.GetValue(0)));
                         email_textbox.Text = (String.Format("{0}", reader.GetValue(4)));
                         telefonszam_textbox.Text = (String.Format("{0}", reader.GetValue(5)));
                         string eleres = Environment.CurrentDirectory + @"\Adatbazis" + reader.GetValue(6).ToString();
