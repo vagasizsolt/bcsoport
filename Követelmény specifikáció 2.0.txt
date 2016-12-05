@@ -40,7 +40,7 @@ kapunk
 Jelenlegi üzleti folyamatok modellje:
 -------------------------------------------------------
 
--->Azonosítani a célokat --> A feladat vázlatát elkészíteni --> Grafikus felületet megtervezni -->
+Azonosítani a célokat --> A feladat vázlatát elkészíteni --> Grafikus felületet megtervezni -->
 A feladat vázlatát valamint a grafikus felületet felülvizsgálni --> Az adatokat összegyűjteni -->
 Azokat felvenni egy adatbázisban --> A beléptető rendszert megírni --> Keresőmotor megvalósítása -->
 Keresőmotor tesztelése --> Egyéb funkciók teljesítése --> Hibák kezelése, és javítása -->
