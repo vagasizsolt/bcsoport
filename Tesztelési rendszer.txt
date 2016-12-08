@@ -154,3 +154,6 @@ Erre az alábbi módokat követhetjük:
 	- Szöveges leírás
 	- Szöveges leírás képekkel mellékelve
 	- Tutorial videó készítése
+	- Élő videóban való bemutatás
+	- Tanító tanuló alapú tanulási technika
+	- Online tanulási technika
