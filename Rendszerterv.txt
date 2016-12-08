@@ -104,8 +104,6 @@ Logikai vetületek:
 	A módosítás alapvető következményei:
 	------------------------------------------------------
 
-	A „szabad” nem feltétlenül jelent „ingyenest”: bárki bármennyiért árusíthatja a kérdéses 
-	programot, az egyetlen feltétel, hogy az FSF által meghatározott alábbi négy alapjogot garantálja vevői számra.
  		a) A program bármilyen céllal történő futtatásának, felhasználásának joga.
  		b) A szabad tanulmányozhatóság és igény szerinti módosíthatósághoz való jog, valamint jog 
 		arra, hogy a szoftvert a szükségletekhez igazíthassák. Ennek előfeltétele a forráskódhoz való hozzáférhetőség.
@@ -113,3 +111,5 @@ Logikai vetületek:
  		d) A szoftver tökéletesítésének, módosításának joga, valamint ezen javított kiadás – az közösség javát szolgáló–
 		közzétételének joga. Ennek szintén előfeltétele a forráskód elérhetősége.
  		e) Az eredeti kód szerző(inek) feltüntetése.
+		f) Az általunk megírt kódot nem használhatja föl ugy senki, hogy azt bővítve akarná eladni, vagy bármilyen előnyhöz
+		jutni
