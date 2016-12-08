@@ -116,3 +116,41 @@ Ebben a fejezetben azon eszközökről lesz szó amelyek felhasználhatóak a te
 		 információkat 
 		 - Az adott projekten belüli is lehet de ilyen esetben fontos ,hogy úgy tudja használni azt a modult mint egy átlagos
 		 felhasználó
+		 
+8. Szerepkörök:
+----------------------------
+
+Meghatározott szerepkörök az alábbiak:
+	Tesztelés vezető
+	- Ő az aki minden tesztelési ciklusnak a főnöke, az álltala megadott utasítások szerint kell ejárni
+	Tesztelés alvezető
+	- Ő a kapocs a tesztelés vezető és a tesztelők között
+	Tesztelők
+	- Olyanok, akik értenek hozzá valamint átlagos emberek, akik nem használnak ilyan programokat
+	
+
+9. Kockázatok:
+----------------------------
+
+Olyan információkat tartalmaz ez a fejezet melyeket mindenképpen el kell kerülni, amennyiben ez nem megoldható akkor minimalizálni kell
+az ilyen eseteket
+	Projekten kívüli de cégen belüli egyének bevonása esetén kerüljük el az alábbiakat:
+		- Forráskód megtekinthetősége
+		- Teszteletlen modulok maradtak
+		
+	Projekten kivüli és cégen kivüli egyének bevonása esetén kerüljük el az alábbiakat:
+		- Forráskód megtekinthetősége
+		- Szoftverről való nyilatkozás más cégeknek
+		- A programunk továbbfejlesztése, majd annak értékesítése
+		- A vevőink elvesztése az esetleges konkurencia miatt
+		- Más fejlesztői csoport alapjául szolgál a kódunk
+			
+10. Betanitás:
+----------------------------
+
+Amennyiben a szoftver, vagyis modul tesztelésének a végére érünk akkor azt az adott blokkot tanítsuk meg a
+felhasználónak/felhasználóknak, hogy hogyan kell használni azt.
+Erre az alábbi módokat követhetjük:
+	- Szöveges leírás
+	- Szöveges leírás képekkel mellékelve
+	- Tutorial videó készítése
