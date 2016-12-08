@@ -1,0 +1,34 @@
+1. Dokumentum megállapítása:
+------------------------------------------
+
+Ez a dokumentum szándékozik meghatározni a projektünk tesztelési elvárásait.
+
+Amennyiben az alábbi feltételeknek megfelel a rendszer:
+	- specifikációban leírt és elfogadtott funkciók az elvárásoknak megfelelõen mûködnek
+	- a programban használt SQLite adatbázis lekérdezések idejei nem haladnak meg egy maximum határértéket
+	- minden egyes metódusnak az egység tesztje 100%-ig jónak kell lennie, azaz átkell mennie minden teszten
+	
+akkor kijelenthetjük, hogy a program ezen verziójának a fejlesztését sikeresen befejeztük.
+
+2. Felhasznált dokumentumok:
+------------------------------------------
+
+A tesztelés sikerességéhez az alábbi dokumentumokat kellet felhasználnunk:
+	- Rendszerterv
+		- Ez határozta meg azt hogy mik találhatóak majd meg a mi rendszerünkben és annak hogyan és mikkel kell felépülnie.
+	- Követelmény specifikáció
+		- Ebben vannak leírva azon feltételek melyeknek mindenképpen benne kell lennie a programban a sikeres elkészüléshez.
+	- Képernyõ tervek
+		- Egyaránt kattintható és szöveges (képekkel) képernyõ tervek is találhatóak
+		- Ez határozta azt meg, hogy mire kattintva mi jöjjön be - mi történjen a felhasználói felületen.
+		- Ez fõleg a login felületre vonatkozik, majd belépés után már magára a keresõre is vonatkozik
+	- Forráskódban fellelhetõ egység tesztek
+	
+3. Leszállítandó dokumentumok:
+--------------------------------------------
+
+Ebben a fejezetben azt határozzuk meg, hogy mely dokumentumokat kell átadni a sikeres teszteléshez.
+	- Az elkészült program (modul) futtatható állományát
+		- Windows esetén - .EXE
+		- Visual Studio esetén -.SLN
+	- Nyiltforráskódúság esetén az egész programhoz felhasznált képek, adatbázis anyagok mellett a forráskód
